@@ -1,0 +1,1317 @@
+2024-12-13 05:25:57,671 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2024-12-13 05:25:57,672 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Preconfiguration: 
+2024-12-13 05:25:57,672 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - 
+
+
+RESOURCE_PARAMS extraction logs:
+jvm_params: -Xmx536870902 -Xms536870902 -XX:MaxDirectMemorySize=268435458 -XX:MaxMetaspaceSize=268435456
+dynamic_configs: -D taskmanager.memory.network.min=134217730b -D taskmanager.cpu.cores=1.0 -D taskmanager.memory.task.off-heap.size=0b -D taskmanager.memory.jvm-metaspace.size=268435456b -D external-resources=none -D taskmanager.memory.jvm-overhead.min=201326592b -D taskmanager.memory.framework.off-heap.size=134217728b -D taskmanager.memory.network.max=134217730b -D taskmanager.memory.framework.heap.size=134217728b -D taskmanager.memory.managed.size=536870920b -D taskmanager.memory.task.heap.size=402653174b -D taskmanager.numberOfTaskSlots=1 -D taskmanager.memory.jvm-overhead.max=201326592b
+logs: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+INFO  [] - Loading configuration property: env.java.opts.jobmanager, -Duser.timezone=UTC
+INFO  [] - Loading configuration property: taskmanager.bind-host, localhost
+INFO  [] - Loading configuration property: env.java.opts, -Duser.timezone=UTC
+INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+INFO  [] - Loading configuration property: table.local-time-zone, UTC
+INFO  [] - Loading configuration property: jobmanager.rpc.address, localhost
+INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+INFO  [] - Loading configuration property: rest.bind-address, localhost
+INFO  [] - Loading configuration property: jobmanager.bind-host, localhost
+INFO  [] - Loading configuration property: taskmanager.host, localhost
+INFO  [] - Loading configuration property: parallelism.default, 1
+INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+INFO  [] - Loading configuration property: rest.address, localhost
+INFO  [] - Loading configuration property: env.java.opts.taskmanager, -Duser.timezone=UTC
+INFO  [] - Loading configuration property: env.java.opts.all, --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+INFO  [] - The derived from fraction jvm overhead memory (172.800mb (181193935 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+INFO  [] - Final TaskExecutor Memory configuration:
+INFO  [] -   Total Process Memory:          1.688gb (1811939328 bytes)
+INFO  [] -     Total Flink Memory:          1.250gb (1342177280 bytes)
+INFO  [] -       Total JVM Heap Memory:     512.000mb (536870902 bytes)
+INFO  [] -         Framework:               128.000mb (134217728 bytes)
+INFO  [] -         Task:                    384.000mb (402653174 bytes)
+INFO  [] -       Total Off-heap Memory:     768.000mb (805306378 bytes)
+INFO  [] -         Managed:                 512.000mb (536870920 bytes)
+INFO  [] -         Total JVM Direct Memory: 256.000mb (268435458 bytes)
+INFO  [] -           Framework:             128.000mb (134217728 bytes)
+INFO  [] -           Task:                  0 bytes
+INFO  [] -           Network:               128.000mb (134217730 bytes)
+INFO  [] -     JVM Metaspace:               256.000mb (268435456 bytes)
+INFO  [] -     JVM Overhead:                192.000mb (201326592 bytes)
+
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Starting TaskManager (Version: 1.18.0, Scala: 2.12, Rev:a5548cc, Date:2023-10-18T22:09:35+02:00)
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  OS current user: vaibhavmishra
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM: Java HotSpot(TM) 64-Bit Server VM - Oracle Corporation - 23/23.0.1+11-39
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Arch: aarch64
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Maximum heap size: 512 MiBytes
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JAVA_HOME: (not set)
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  No Hadoop Dependency available
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM Options:
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xmx536870902
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xms536870902
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxDirectMemorySize=268435458
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxMetaspaceSize=268435456
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:+IgnoreUnrecognizedVMOptions
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=java.base/sun.net.util=ALL-UNNAMED
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
+2024-12-13 05:25:57,673 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.lang=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.net=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.io=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.nio=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.text=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.time=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Duser.timezone=UTC
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog.file=/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/log/flink-vaibhavmishra-taskexecutor-0-IM-BAN-LAP-0525.local.log
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configuration=file:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/conf/log4j.properties
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configurationFile=file:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/conf/log4j.properties
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlogback.configurationFile=file:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/conf/logback.xml
+2024-12-13 05:25:57,674 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Program Arguments:
+2024-12-13 05:25:57,675 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --configDir
+2024-12-13 05:25:57,675 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     /Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/conf
+2024-12-13 05:25:57,675 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,675 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.min=134217730b
+2024-12-13 05:25:57,675 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,675 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.cpu.cores=1.0
+2024-12-13 05:25:57,675 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,675 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.off-heap.size=0b
+2024-12-13 05:25:57,675 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-metaspace.size=268435456b
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     external-resources=none
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.min=201326592b
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.off-heap.size=134217728b
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.max=134217730b
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.heap.size=134217728b
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.managed.size=536870920b
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.heap.size=402653174b
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.numberOfTaskSlots=1
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.max=201326592b
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Classpath: /Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-cep-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-connector-files-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-csv-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-json-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-scala_2.12-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-sql-connector-elasticsearch7-3.0.1.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-sql-connector-mysql-cdc-3.0.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-sql-connector-postgres-cdc-2.4.2.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-table-api-java-uber-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-table-planner-loader-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-table-runtime-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/log4j-1.2-api-2.17.1.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/log4j-api-2.17.1.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/log4j-core-2.17.1.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/log4j-slf4j-impl-2.17.1.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-dist-1.18.0.jar::::
+2024-12-13 05:25:57,676 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2024-12-13 05:25:57,677 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+2024-12-13 05:25:57,678 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Maximum number of open file descriptors is 2147483647.
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.jobmanager, -Duser.timezone=UTC
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, localhost
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts, -Duser.timezone=UTC
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: table.local-time-zone, UTC
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, localhost
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, localhost
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, localhost
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.host, localhost
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, localhost
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.taskmanager, -Duser.timezone=UTC
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.all, --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2024-12-13 05:25:57,684 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.min, 134217730b
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-metaspace.size, 268435456b
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.off-heap.size, 0b
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.cpu.cores, 1.0
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: external-resources, none
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.min, 201326592b
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.off-heap.size, 134217728b
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.max, 134217730b
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.heap.size, 134217728b
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.managed.size, 536870920b
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.heap.size, 402653174b
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.numberOfTaskSlots, 1
+2024-12-13 05:25:57,685 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.max, 201326592b
+2024-12-13 05:25:57,704 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2024-12-13 05:25:57,711 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+2024-12-13 05:25:57,715 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+2024-12-13 05:25:57,715 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+2024-12-13 05:25:57,715 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+2024-12-13 05:25:57,715 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+2024-12-13 05:25:57,715 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+2024-12-13 05:25:57,715 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+2024-12-13 05:25:57,715 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+2024-12-13 05:25:57,724 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+2024-12-13 05:25:57,724 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2024-12-13 05:25:57,725 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2024-12-13 05:25:57,725 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2024-12-13 05:25:57,725 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2024-12-13 05:25:57,725 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2024-12-13 05:25:57,725 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2024-12-13 05:25:57,725 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2024-12-13 05:25:57,725 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2024-12-13 05:25:57,725 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+2024-12-13 05:25:57,736 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2024-12-13 05:25:57,755 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/jaas-11119143219309965131.conf.
+2024-12-13 05:25:57,758 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+2024-12-13 05:25:57,925 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Using configured hostname/address for TaskManager: localhost.
+2024-12-13 05:25:57,948 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address localhost:0, bind address localhost:0.
+2024-12-13 05:25:58,241 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2024-12-13 05:25:58,254 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2024-12-13 05:25:58,254 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+2024-12-13 05:25:58,322 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink@localhost:51123]
+2024-12-13 05:25:58,371 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink@localhost:51123
+2024-12-13 05:25:58,380 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Using working directory: WorkingDirectory(/var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/tm_localhost:51123-5e1d16)
+2024-12-13 05:25:58,384 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+2024-12-13 05:25:58,386 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address localhost:0, bind address localhost:0.
+2024-12-13 05:25:58,394 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2024-12-13 05:25:58,396 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2024-12-13 05:25:58,397 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+2024-12-13 05:25:58,399 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink-metrics@localhost:51124]
+2024-12-13 05:25:58,403 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink-metrics@localhost:51124
+2024-12-13 05:25:58,409 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at pekko://flink-metrics/user/rpc/MetricQueryService_localhost:51123-5e1d16 .
+2024-12-13 05:25:58,417 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Created BLOB cache storage directory /var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/tm_localhost:51123-5e1d16/blobStorage
+2024-12-13 05:25:58,419 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Created BLOB cache storage directory /var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/tm_localhost:51123-5e1d16/blobStorage
+2024-12-13 05:25:58,420 INFO  org.apache.flink.runtime.externalresource.ExternalResourceUtils [] - Enabled external resources: []
+2024-12-13 05:25:58,420 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+2024-12-13 05:25:58,422 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+2024-12-13 05:25:58,422 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+2024-12-13 05:25:58,422 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2024-12-13 05:25:58,422 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2024-12-13 05:25:58,422 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2024-12-13 05:25:58,422 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2024-12-13 05:25:58,422 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2024-12-13 05:25:58,422 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2024-12-13 05:25:58,422 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2024-12-13 05:25:58,422 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2024-12-13 05:25:58,422 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+2024-12-13 05:25:58,422 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Starting TaskManager with ResourceID: localhost:51123-5e1d16
+2024-12-13 05:25:58,432 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices    [] - Temporary file directory '/var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T': total 460 GB, usable 223 GB (48.48% usable)
+2024-12-13 05:25:58,434 INFO  org.apache.flink.runtime.io.disk.iomanager.IOManager         [] - Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+	/var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/flink-io-3de6f699-80b2-4e14-81a5-3e0123088575
+2024-12-13 05:25:58,438 INFO  org.apache.flink.runtime.io.network.netty.NettyConfig        [] - NettyConfig [server address: localhost/127.0.0.1, server port: 0, ssl enabled: false, memory segment size (bytes): 32768, transport type: AUTO, number of server threads: 1 (manual), number of client threads: 1 (manual), server connect backlog: 0 (use Netty's default), client connect timeout (sec): 120, send/receive buffer size (bytes): 0 (use Netty's default)]
+2024-12-13 05:25:58,468 INFO  org.apache.flink.runtime.io.network.NettyShuffleServiceFactory [] - Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+	/var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/flink-netty-shuffle-1ff56bd4-59f6-4b40-a34f-5f150bcebe05
+2024-12-13 05:25:58,503 INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool [] - Allocated 128 MB for network buffer pool (number of memory segments: 4096, bytes per segment: 32768).
+2024-12-13 05:25:58,518 INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment  [] - Starting the network environment and its components.
+2024-12-13 05:25:58,546 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Transport type 'auto': using NIO.
+2024-12-13 05:25:58,547 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Successful initialization (took 29 ms).
+2024-12-13 05:25:58,549 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Transport type 'auto': using NIO.
+2024-12-13 05:25:58,588 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Successful initialization (took 40 ms). Listening on SocketAddress /127.0.0.1:51125.
+2024-12-13 05:25:58,589 INFO  org.apache.flink.runtime.taskexecutor.KvStateService         [] - Starting the kvState service and its components.
+2024-12-13 05:25:58,624 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at pekko://flink/user/rpc/taskmanager_0 .
+2024-12-13 05:25:58,637 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Start job leader service.
+2024-12-13 05:25:58,638 INFO  org.apache.flink.runtime.filecache.FileCache                 [] - User file cache uses directory /var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/flink-dist-cache-604744fb-01b5-49db-b251-404e980c7586
+2024-12-13 05:25:58,640 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Connecting to ResourceManager pekko.tcp://flink@localhost:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000).
+2024-12-13 05:25:58,755 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Resolved ResourceManager address, beginning registration
+2024-12-13 05:25:58,796 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Successful registration at resource manager pekko.tcp://flink@localhost:6123/user/rpc/resourcemanager_* under registration id d0dc178e1555a91bc3eb3d6781f0b5d3.
+2024-12-13 05:37:39,710 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Receive slot request 5ee20ecd83c29c497e2781f35e15fc7c for job 07a359e2127ab4414043fa919e0b565a from resource manager with leader id 00000000000000000000000000000000.
+2024-12-13 05:37:39,712 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Allocated slot for 5ee20ecd83c29c497e2781f35e15fc7c with resources ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}.
+2024-12-13 05:37:39,716 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Add job 07a359e2127ab4414043fa919e0b565a for job leader monitoring.
+2024-12-13 05:37:39,717 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Try to register at job manager pekko.tcp://flink@localhost:6123/user/rpc/jobmanager_2 with leader id 00000000-0000-0000-0000-000000000000.
+2024-12-13 05:37:39,729 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Resolved JobManager address, beginning registration
+2024-12-13 05:37:39,739 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Successful registration at job manager pekko.tcp://flink@localhost:6123/user/rpc/jobmanager_2 for job 07a359e2127ab4414043fa919e0b565a.
+2024-12-13 05:37:39,740 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Establish JobManager connection for job 07a359e2127ab4414043fa919e0b565a.
+2024-12-13 05:37:39,741 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Offer reserved slots to the leader of job 07a359e2127ab4414043fa919e0b565a.
+2024-12-13 05:37:39,760 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 5ee20ecd83c29c497e2781f35e15fc7c.
+2024-12-13 05:37:39,772 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - Creating a changelog storage with name 'memory'.
+2024-12-13 05:37:39,778 INFO  org.apache.flink.runtime.state.TaskExecutorChannelStateExecutorFactoryManager [] - Creating the channel state executor factory for job id 07a359e2127ab4414043fa919e0b565a
+2024-12-13 05:37:39,783 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Source: orders[1] (1/1)#0 (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0), deploy into slot with allocation id 5ee20ecd83c29c497e2781f35e15fc7c.
+2024-12-13 05:37:39,783 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: orders[1] (1/1)#0 (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CREATED to DEPLOYING.
+2024-12-13 05:37:39,784 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 5ee20ecd83c29c497e2781f35e15fc7c.
+2024-12-13 05:37:39,785 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Source: shipments[3] (1/1)#0 (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0), deploy into slot with allocation id 5ee20ecd83c29c497e2781f35e15fc7c.
+2024-12-13 05:37:39,785 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 5ee20ecd83c29c497e2781f35e15fc7c.
+2024-12-13 05:37:39,785 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: shipments[3] (1/1)#0 (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) switched from CREATED to DEPLOYING.
+2024-12-13 05:37:39,785 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Source: orders[1] (1/1)#0 (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) [DEPLOYING].
+2024-12-13 05:37:39,785 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Source: shipments[3] (1/1)#0 (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) [DEPLOYING].
+2024-12-13 05:37:39,787 INFO  org.apache.flink.runtime.blob.BlobClient                     [] - Downloading 07a359e2127ab4414043fa919e0b565a/p-88f813b42aacd4cf2a7baaadc55d1e40525f4d06-d4c5ea61ae2e533b0afb2db3134aac25 from localhost/127.0.0.1:51120
+2024-12-13 05:37:39,793 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0), deploy into slot with allocation id 5ee20ecd83c29c497e2781f35e15fc7c.
+2024-12-13 05:37:39,794 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 5ee20ecd83c29c497e2781f35e15fc7c.
+2024-12-13 05:37:39,793 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from CREATED to DEPLOYING.
+2024-12-13 05:37:39,794 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) [DEPLOYING].
+2024-12-13 05:37:39,795 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0), deploy into slot with allocation id 5ee20ecd83c29c497e2781f35e15fc7c.
+2024-12-13 05:37:39,795 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from CREATED to DEPLOYING.
+2024-12-13 05:37:39,795 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) [DEPLOYING].
+2024-12-13 05:37:39,795 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 5ee20ecd83c29c497e2781f35e15fc7c.
+2024-12-13 05:37:39,807 INFO  org.apache.flink.runtime.blob.BlobClient                     [] - Downloading 07a359e2127ab4414043fa919e0b565a/p-6ae470fe55e422f67921346ffff4e17ac72a9fe7-b5968768ae21f3029079c71baddd3c5b from localhost/127.0.0.1:51120
+2024-12-13 05:37:39,906 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@3eb8ca1b
+2024-12-13 05:37:39,907 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-12-13 05:37:39,907 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-12-13 05:37:39,915 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:37:39,921 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@31285432
+2024-12-13 05:37:39,921 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@7e42579a
+2024-12-13 05:37:39,921 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@6dcc1853
+2024-12-13 05:37:39,921 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-12-13 05:37:39,921 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-12-13 05:37:39,921 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-12-13 05:37:39,921 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-12-13 05:37:39,921 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-12-13 05:37:39,921 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-12-13 05:37:39,921 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:37:39,921 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: shipments[3] (1/1)#0 (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:37:39,921 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: orders[1] (1/1)#0 (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:37:40,045 INFO  org.apache.flink.runtime.state.heap.HeapKeyedStateBackendBuilder [] - Finished to build heap keyed state-backend.
+2024-12-13 05:37:40,049 INFO  org.apache.flink.runtime.state.heap.HeapKeyedStateBackend    [] - Initializing heap keyed state backend with stream factory.
+2024-12-13 05:37:40,073 INFO  com.ververica.cdc.debezium.DebeziumSourceFunction            [] - Consumer subtask 0 has no restore state.
+2024-12-13 05:37:40,073 INFO  com.ververica.cdc.debezium.DebeziumSourceFunction            [] - Consumer subtask 0 has no restore state.
+2024-12-13 05:37:40,074 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: shipments[3] (1/1)#0 (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:37:40,074 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: orders[1] (1/1)#0 (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:37:40,081 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:37:40,102 INFO  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverterConfig [] - JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+
+2024-12-13 05:37:40,102 INFO  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverterConfig [] - JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+
+2024-12-13 05:37:40,104 INFO  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverterConfig [] - JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+
+2024-12-13 05:37:40,104 INFO  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverterConfig [] - JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+
+2024-12-13 05:37:40,109 INFO  io.debezium.embedded.EmbeddedEngine$EmbeddedConfig           [] - EmbeddedConfig values: 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	admin.listeners = null
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	config.providers = []
+	connector.client.config.override.policy = All
+	header.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.storage.SimpleHeaderConverter
+	key.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+	listeners = [http://:8083]
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	offset.flush.interval.ms = 9223372036854775807
+	offset.flush.timeout.ms = 5000
+	offset.storage.file.filename = 
+	offset.storage.partitions = null
+	offset.storage.replication.factor = null
+	offset.storage.topic = 
+	plugin.path = null
+	response.http.headers.config = 
+	rest.advertised.host.name = null
+	rest.advertised.listener = null
+	rest.advertised.port = null
+	rest.extension.classes = []
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	task.shutdown.graceful.timeout.ms = 5000
+	topic.creation.enable = true
+	topic.tracking.allow.reset = true
+	topic.tracking.enable = true
+	value.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+
+2024-12-13 05:37:40,109 INFO  io.debezium.embedded.EmbeddedEngine$EmbeddedConfig           [] - EmbeddedConfig values: 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	admin.listeners = null
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	config.providers = []
+	connector.client.config.override.policy = All
+	header.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.storage.SimpleHeaderConverter
+	key.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+	listeners = [http://:8083]
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	offset.flush.interval.ms = 9223372036854775807
+	offset.flush.timeout.ms = 5000
+	offset.storage.file.filename = 
+	offset.storage.partitions = null
+	offset.storage.replication.factor = null
+	offset.storage.topic = 
+	plugin.path = null
+	response.http.headers.config = 
+	rest.advertised.host.name = null
+	rest.advertised.listener = null
+	rest.advertised.port = null
+	rest.extension.classes = []
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	task.shutdown.graceful.timeout.ms = 5000
+	topic.creation.enable = true
+	topic.tracking.allow.reset = true
+	topic.tracking.enable = true
+	value.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+
+2024-12-13 05:37:40,109 WARN  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.runtime.WorkerConfig [] - The worker has been configured with one or more internal converter properties ([internal.key.converter, internal.value.converter]). Support for these properties was deprecated in version 2.0 and removed in version 3.0, and specifying them will have no effect. Instead, an instance of the JsonConverter with schemas.enable set to false will be used. For more information, please visit http://kafka.apache.org/documentation/#upgrade and consult the upgrade notesfor the 3.0 release.
+2024-12-13 05:37:40,109 WARN  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.runtime.WorkerConfig [] - The worker has been configured with one or more internal converter properties ([internal.key.converter, internal.value.converter]). Support for these properties was deprecated in version 2.0 and removed in version 3.0, and specifying them will have no effect. Instead, an instance of the JsonConverter with schemas.enable set to false will be used. For more information, please visit http://kafka.apache.org/documentation/#upgrade and consult the upgrade notesfor the 3.0 release.
+2024-12-13 05:37:40,109 WARN  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.runtime.WorkerConfig [] - Variables cannot be used in the 'plugin.path' property, since the property is used by plugin scanning before the config providers that replace the variables are initialized. The raw value 'null' was used for plugin scanning, as opposed to the transformed value 'null', and this may cause unexpected results.
+2024-12-13 05:37:40,109 WARN  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.runtime.WorkerConfig [] - Variables cannot be used in the 'plugin.path' property, since the property is used by plugin scanning before the config providers that replace the variables are initialized. The raw value 'null' was used for plugin scanning, as opposed to the transformed value 'null', and this may cause unexpected results.
+2024-12-13 05:37:40,135 WARN  io.debezium.connector.postgresql.PostgresConnectorConfig     [] - Configuration property 'truncate.handling.mode' is deprecated and will be removed in future versions. Please use 'skipped.operations' instead.
+2024-12-13 05:37:40,135 WARN  io.debezium.connector.postgresql.PostgresConnectorConfig     [] - Configuration property 'truncate.handling.mode' is deprecated and will be removed in future versions. Please use 'skipped.operations' instead.
+2024-12-13 05:37:40,137 WARN  io.debezium.connector.postgresql.PostgresConnectorConfig     [] - Configuration property 'toasted.value.placeholder' is deprecated and will be removed in future versions. Please use 'unavailable.value.placeholder' instead.
+2024-12-13 05:37:40,137 WARN  io.debezium.connector.postgresql.PostgresConnectorConfig     [] - Configuration property 'toasted.value.placeholder' is deprecated and will be removed in future versions. Please use 'unavailable.value.placeholder' instead.
+2024-12-13 05:37:40,137 INFO  io.debezium.connector.common.BaseSourceTask                  [] - Starting PostgresConnectorTask with configuration:
+2024-12-13 05:37:40,137 INFO  io.debezium.connector.common.BaseSourceTask                  [] - Starting PostgresConnectorTask with configuration:
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    connector.class = io.debezium.connector.postgresql.PostgresConnector
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    connector.class = io.debezium.connector.postgresql.PostgresConnector
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    slot.name = flink_orders
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    schema.include.list = public
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    slot.name = flink_shipments
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    include.schema.changes = false
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    tombstones.on.delete = false
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    schema.include.list = public
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.storage.file.filename = 
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    include.schema.changes = false
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    value.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.history.instance.name = 754d1562-cfcb-4f17-a91e-76dd1de7365a
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    tombstones.on.delete = false
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    key.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.storage.file.filename = 
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.user = postgres
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    value.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.dbname = postgres
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.history.instance.name = a6d2dcc8-8bac-4f72-95c1-9a930a9d71c1
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.storage = com.ververica.cdc.debezium.internal.FlinkOffsetBackingStore
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    key.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.server.name = postgres_cdc_source
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.user = postgres
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.flush.timeout.ms = 5000
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.dbname = postgres
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    heartbeat.interval.ms = 300000
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.storage = com.ververica.cdc.debezium.internal.FlinkOffsetBackingStore
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.port = 5434
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.server.name = postgres_cdc_source
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    plugin.name = decoderbufs
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.flush.timeout.ms = 5000
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.flush.interval.ms = 9223372036854775807
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    heartbeat.interval.ms = 300000
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    internal.key.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.port = 5434
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.hostname = localhost
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    plugin.name = decoderbufs
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.password = ********
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.flush.interval.ms = 9223372036854775807
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    name = engine
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    internal.key.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    internal.value.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.hostname = localhost
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    table.include.list = public.orders
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.password = ********
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.history = com.ververica.cdc.debezium.internal.FlinkDatabaseSchemaHistory
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    name = engine
+2024-12-13 05:37:40,138 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    internal.value.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:37:40,139 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    table.include.list = public.shipments
+2024-12-13 05:37:40,139 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.history = com.ververica.cdc.debezium.internal.FlinkDatabaseSchemaHistory
+2024-12-13 05:37:40,162 INFO  org.apache.flink.streaming.connectors.elasticsearch7.Elasticsearch7ApiCallBridge [] - Pinging Elasticsearch cluster via hosts [https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243] ...
+2024-12-13 05:37:40,299 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:37:40,299 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:37:40,528 INFO  io.debezium.connector.common.BaseSourceTask                  [] - No previous offsets found
+2024-12-13 05:37:40,528 INFO  io.debezium.connector.common.BaseSourceTask                  [] - No previous offsets found
+2024-12-13 05:37:40,546 INFO  io.debezium.connector.postgresql.PostgresConnectorTask       [] - user 'postgres' connected to database 'postgres' on PostgreSQL 11.12 (Debian 11.12-1.pgdg90+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516, 64-bit with roles:
+	role 'pg_read_all_settings' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_stat_scan_tables' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_write_server_files' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_monitor' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_read_server_files' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_execute_server_program' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_read_all_stats' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_signal_backend' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'postgres' [superuser: true, replication: true, inherit: true, create role: true, create db: true, can log in: true]
+2024-12-13 05:37:40,546 INFO  io.debezium.connector.postgresql.PostgresConnectorTask       [] - user 'postgres' connected to database 'postgres' on PostgreSQL 11.12 (Debian 11.12-1.pgdg90+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516, 64-bit with roles:
+	role 'pg_read_all_settings' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_stat_scan_tables' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_write_server_files' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_monitor' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_read_server_files' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_execute_server_program' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_read_all_stats' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_signal_backend' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'postgres' [superuser: true, replication: true, inherit: true, create role: true, create db: true, can log in: true]
+2024-12-13 05:37:40,556 INFO  io.debezium.connector.postgresql.connection.PostgresConnection [] - Obtained valid replication slot ReplicationSlot [active=false, latestFlushedLsn=null, catalogXmin=null]
+2024-12-13 05:37:40,556 INFO  io.debezium.connector.postgresql.connection.PostgresConnection [] - Obtained valid replication slot ReplicationSlot [active=false, latestFlushedLsn=null, catalogXmin=null]
+2024-12-13 05:37:40,556 INFO  io.debezium.connector.postgresql.PostgresConnectorTask       [] - No previous offset found
+2024-12-13 05:37:40,556 INFO  io.debezium.connector.postgresql.PostgresConnectorTask       [] - No previous offset found
+2024-12-13 05:37:40,556 INFO  io.debezium.connector.postgresql.snapshot.InitialSnapshotter [] - Taking initial snapshot for new datasource
+2024-12-13 05:37:40,556 INFO  io.debezium.connector.postgresql.snapshot.InitialSnapshotter [] - Taking initial snapshot for new datasource
+2024-12-13 05:37:40,597 INFO  io.debezium.connector.postgresql.connection.PostgresReplicationConnection [] - Creating replication slot with command CREATE_REPLICATION_SLOT "flink_orders"  LOGICAL decoderbufs
+2024-12-13 05:37:40,598 INFO  io.debezium.connector.postgresql.connection.PostgresReplicationConnection [] - Creating replication slot with command CREATE_REPLICATION_SLOT "flink_shipments"  LOGICAL decoderbufs
+2024-12-13 05:37:40,631 INFO  org.apache.flink.streaming.connectors.elasticsearch7.Elasticsearch7ApiCallBridge [] - Elasticsearch RestHighLevelClient is connected to [https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243]
+2024-12-13 05:37:40,633 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector PostgresConnector, id = postgres_cdc_source named = change-event-source-coordinator
+2024-12-13 05:37:40,633 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector PostgresConnector, id = postgres_cdc_source named = change-event-source-coordinator
+2024-12-13 05:37:40,636 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-postgresconnector-postgres_cdc_source-change-event-source-coordinator
+2024-12-13 05:37:40,636 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-postgresconnector-postgres_cdc_source-change-event-source-coordinator
+2024-12-13 05:37:40,638 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 1 out of 12)
+2024-12-13 05:37:40,638 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Metrics registered
+2024-12-13 05:37:40,638 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Context created
+2024-12-13 05:37:40,640 INFO  io.debezium.connector.postgresql.snapshot.InitialSnapshotter [] - Taking initial snapshot for new datasource
+2024-12-13 05:37:40,640 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - According to the connector configuration data will be snapshotted
+2024-12-13 05:37:40,641 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 1 - Preparing
+2024-12-13 05:37:40,641 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Setting isolation level
+2024-12-13 05:37:40,641 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Opening transaction with statement SET TRANSACTION ISOLATION LEVEL REPEATABLE READ; 
+SET TRANSACTION SNAPSHOT '00000007-00000002-1';
+2024-12-13 05:37:40,730 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 2 - Determining captured tables
+2024-12-13 05:37:40,738 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.geom to the list of capture schema tables
+2024-12-13 05:37:40,738 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.products_on_hand to the list of capture schema tables
+2024-12-13 05:37:40,738 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table public.orders to the list of capture schema tables
+2024-12-13 05:37:40,738 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.customers to the list of capture schema tables
+2024-12-13 05:37:40,738 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.orders to the list of capture schema tables
+2024-12-13 05:37:40,739 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.products to the list of capture schema tables
+2024-12-13 05:37:40,739 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table public.shipments to the list of capture schema tables
+2024-12-13 05:37:40,739 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 3 - Locking captured tables [public.shipments]
+2024-12-13 05:37:40,739 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 4 - Determining snapshot offset
+2024-12-13 05:37:40,740 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Creating initial offset context
+2024-12-13 05:37:40,744 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Read xlogStart at 'LSN{0/20A6FF0}' from transaction '608'
+2024-12-13 05:37:40,746 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Read xlogStart at 'LSN{0/20A6FF0}' from transaction '608'
+2024-12-13 05:37:40,746 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 5 - Reading structure of captured tables
+2024-12-13 05:37:40,746 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Reading structure of schema 'public' of catalog 'postgres'
+2024-12-13 05:37:40,759 INFO  org.apache.flink.runtime.state.heap.HeapKeyedStateBackendBuilder [] - Finished to build heap keyed state-backend.
+2024-12-13 05:37:40,759 INFO  org.apache.flink.runtime.state.heap.HeapKeyedStateBackend    [] - Initializing heap keyed state backend with stream factory.
+2024-12-13 05:37:40,770 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:37:40,806 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 6 - Persisting schema history
+2024-12-13 05:37:40,806 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 7 - Snapshotting data
+2024-12-13 05:37:40,806 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshotting contents of 1 tables while still in transaction
+2024-12-13 05:37:40,806 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Exporting data from table 'public.shipments' (1 of 1 tables)
+2024-12-13 05:37:40,807 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - 	 For table 'public.shipments' using select statement: 'SELECT "shipment_id", "order_id", "origin", "destination", "is_arrived" FROM "public"."shipments"'
+2024-12-13 05:37:40,836 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - 	 Finished exporting 3 records for table 'public.shipments'; total duration '00:00:00.03'
+2024-12-13 05:37:40,839 INFO  io.debezium.pipeline.source.AbstractSnapshotChangeEventSource [] - Snapshot - Final stage
+2024-12-13 05:37:40,839 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Snapshot ended with SnapshotResult [status=COMPLETED, offset=PostgresOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.postgresql.Source:STRUCT}, sourceInfo=source_info[server='postgres_cdc_source'db='postgres', lsn=LSN{0/20A6FF0}, txId=608, timestamp=2024-12-13T05:37:40.642889Z, snapshot=FALSE, schema=public, table=shipments], lastSnapshotRecord=true, lastCompletelyProcessedLsn=null, lastCommitLsn=null, streamingStoppingLsn=null, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], incrementalSnapshotContext=IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]]]
+2024-12-13 05:37:40,840 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Connected metrics set to 'true'
+2024-12-13 05:37:40,874 INFO  io.debezium.connector.postgresql.PostgresSchema              [] - REPLICA IDENTITY for 'public.shipments' is 'FULL'; UPDATE AND DELETE events will contain the previous values of all the columns
+2024-12-13 05:37:40,875 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Starting streaming
+2024-12-13 05:37:40,875 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - Retrieved latest position from stored offset 'LSN{0/20A6FF0}'
+2024-12-13 05:37:40,875 INFO  io.debezium.connector.postgresql.connection.WalPositionLocator [] - Looking for WAL restart position for last commit LSN 'null' and last change LSN 'LSN{0/20A6FF0}'
+2024-12-13 05:37:40,968 INFO  io.debezium.connector.postgresql.connection.PostgresConnection [] - Obtained valid replication slot ReplicationSlot [active=false, latestFlushedLsn=LSN{0/20A6FF0}, catalogXmin=608]
+2024-12-13 05:37:40,969 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:37:40,989 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector PostgresConnector, id = postgres_cdc_source named = keep-alive
+2024-12-13 05:37:40,990 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-postgresconnector-postgres_cdc_source-keep-alive
+2024-12-13 05:37:41,047 INFO  io.debezium.connector.postgresql.PostgresSchema              [] - REPLICA IDENTITY for 'public.shipments' is 'FULL'; UPDATE AND DELETE events will contain the previous values of all the columns
+2024-12-13 05:37:41,051 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - Searching for WAL resume position
+2024-12-13 05:37:41,143 INFO  com.ververica.cdc.debezium.internal.DebeziumChangeFetcher    [] - Database snapshot phase can't perform checkpoint, acquired Checkpoint lock.
+2024-12-13 05:37:41,152 INFO  com.ververica.cdc.debezium.internal.DebeziumChangeFetcher    [] - Received record from streaming binlog phase, released checkpoint lock.
+2024-12-13 05:37:45,644 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 2 out of 12)
+2024-12-13 05:37:50,648 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 3 out of 12)
+2024-12-13 05:37:55,654 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 4 out of 12)
+2024-12-13 05:38:00,662 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 5 out of 12)
+2024-12-13 05:38:05,666 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 6 out of 12)
+2024-12-13 05:38:10,672 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 7 out of 12)
+2024-12-13 05:38:15,677 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 8 out of 12)
+2024-12-13 05:38:20,680 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 9 out of 12)
+2024-12-13 05:38:25,687 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 10 out of 12)
+2024-12-13 05:38:30,693 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 11 out of 12)
+2024-12-13 05:38:35,698 ERROR io.debezium.metrics.Metrics                                  [] - Failed to register metrics MBean, metrics will not be available
+2024-12-13 05:38:35,699 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 1 out of 12)
+2024-12-13 05:38:40,701 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 2 out of 12)
+2024-12-13 05:38:45,708 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 3 out of 12)
+2024-12-13 05:38:50,711 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 4 out of 12)
+2024-12-13 05:38:55,717 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 5 out of 12)
+2024-12-13 05:39:00,722 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 6 out of 12)
+2024-12-13 05:39:05,725 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 7 out of 12)
+2024-12-13 05:39:10,730 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 8 out of 12)
+2024-12-13 05:39:15,733 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 9 out of 12)
+2024-12-13 05:39:20,740 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 10 out of 12)
+2024-12-13 05:39:21,527 INFO  io.debezium.connector.postgresql.connection.WalPositionLocator [] - First LSN 'LSN{0/20B0460}' received
+2024-12-13 05:39:21,527 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - WAL resume position 'LSN{0/20B0460}' discovered
+2024-12-13 05:39:21,528 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:39:21,600 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector PostgresConnector, id = postgres_cdc_source named = keep-alive
+2024-12-13 05:39:21,600 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-postgresconnector-postgres_cdc_source-keep-alive
+2024-12-13 05:39:21,601 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - Processing messages
+2024-12-13 05:39:21,603 INFO  io.debezium.connector.postgresql.connection.WalPositionLocator [] - Message with LSN 'LSN{0/20B0460}' arrived, switching off the filtering
+2024-12-13 05:39:21,847 INFO  io.debezium.connector.common.BaseSourceTask                  [] - 7 records sent during previous 00:01:41.724, last recorded offset: {transaction_id=null, lsn_proc=34277232, lsn=34277232, txId=609, ts_usec=1734068361274421}
+2024-12-13 05:39:25,749 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 11 out of 12)
+2024-12-13 05:39:30,753 ERROR io.debezium.metrics.Metrics                                  [] - Failed to register metrics MBean, metrics will not be available
+2024-12-13 05:39:30,755 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Metrics registered
+2024-12-13 05:39:30,755 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Context created
+2024-12-13 05:39:30,755 INFO  io.debezium.connector.postgresql.snapshot.InitialSnapshotter [] - Taking initial snapshot for new datasource
+2024-12-13 05:39:30,755 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - According to the connector configuration data will be snapshotted
+2024-12-13 05:39:30,755 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 1 - Preparing
+2024-12-13 05:39:30,755 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Setting isolation level
+2024-12-13 05:39:30,755 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Opening transaction with statement SET TRANSACTION ISOLATION LEVEL REPEATABLE READ; 
+SET TRANSACTION SNAPSHOT '00000006-00000002-1';
+2024-12-13 05:39:30,848 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 2 - Determining captured tables
+2024-12-13 05:39:30,854 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.geom to the list of capture schema tables
+2024-12-13 05:39:30,854 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.products_on_hand to the list of capture schema tables
+2024-12-13 05:39:30,854 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table public.orders to the list of capture schema tables
+2024-12-13 05:39:30,854 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.customers to the list of capture schema tables
+2024-12-13 05:39:30,854 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.orders to the list of capture schema tables
+2024-12-13 05:39:30,854 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.products to the list of capture schema tables
+2024-12-13 05:39:30,854 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table public.shipments to the list of capture schema tables
+2024-12-13 05:39:30,854 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 3 - Locking captured tables [public.orders]
+2024-12-13 05:39:30,854 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 4 - Determining snapshot offset
+2024-12-13 05:39:30,854 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Creating initial offset context
+2024-12-13 05:39:30,857 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Read xlogStart at 'LSN{0/20B0870}' from transaction '610'
+2024-12-13 05:39:30,858 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Read xlogStart at 'LSN{0/20A6FB8}' from transaction '610'
+2024-12-13 05:39:30,858 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 5 - Reading structure of captured tables
+2024-12-13 05:39:30,858 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Reading structure of schema 'public' of catalog 'postgres'
+2024-12-13 05:39:30,920 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 6 - Persisting schema history
+2024-12-13 05:39:30,920 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 7 - Snapshotting data
+2024-12-13 05:39:30,920 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshotting contents of 1 tables while still in transaction
+2024-12-13 05:39:30,920 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Exporting data from table 'public.orders' (1 of 1 tables)
+2024-12-13 05:39:30,920 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - 	 For table 'public.orders' using select statement: 'SELECT "order_id", "customer_name", "order_date" FROM "public"."orders"'
+2024-12-13 05:39:30,944 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - 	 Finished exporting 3 records for table 'public.orders'; total duration '00:00:00.024'
+2024-12-13 05:39:30,947 INFO  io.debezium.pipeline.source.AbstractSnapshotChangeEventSource [] - Snapshot - Final stage
+2024-12-13 05:39:30,947 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Snapshot ended with SnapshotResult [status=COMPLETED, offset=PostgresOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.postgresql.Source:STRUCT}, sourceInfo=source_info[server='postgres_cdc_source'db='postgres', lsn=LSN{0/20A6FB8}, txId=610, timestamp=2024-12-13T05:39:30.757034Z, snapshot=FALSE, schema=public, table=orders], lastSnapshotRecord=true, lastCompletelyProcessedLsn=null, lastCommitLsn=null, streamingStoppingLsn=null, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], incrementalSnapshotContext=IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]]]
+2024-12-13 05:39:30,947 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Connected metrics set to 'true'
+2024-12-13 05:39:30,984 INFO  io.debezium.connector.postgresql.PostgresSchema              [] - REPLICA IDENTITY for 'public.orders' is 'FULL'; UPDATE AND DELETE events will contain the previous values of all the columns
+2024-12-13 05:39:30,984 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Starting streaming
+2024-12-13 05:39:30,985 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - Retrieved latest position from stored offset 'LSN{0/20A6FB8}'
+2024-12-13 05:39:30,985 INFO  io.debezium.connector.postgresql.connection.WalPositionLocator [] - Looking for WAL restart position for last commit LSN 'null' and last change LSN 'LSN{0/20A6FB8}'
+2024-12-13 05:39:31,077 INFO  io.debezium.connector.postgresql.connection.PostgresConnection [] - Obtained valid replication slot ReplicationSlot [active=false, latestFlushedLsn=LSN{0/20A6FB8}, catalogXmin=608]
+2024-12-13 05:39:31,079 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:39:31,099 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector PostgresConnector, id = postgres_cdc_source named = keep-alive
+2024-12-13 05:39:31,099 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-postgresconnector-postgres_cdc_source-keep-alive
+2024-12-13 05:39:31,139 INFO  io.debezium.connector.postgresql.PostgresSchema              [] - REPLICA IDENTITY for 'public.orders' is 'FULL'; UPDATE AND DELETE events will contain the previous values of all the columns
+2024-12-13 05:39:31,141 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - Searching for WAL resume position
+2024-12-13 05:39:31,142 INFO  io.debezium.connector.postgresql.connection.WalPositionLocator [] - First LSN 'LSN{0/20B0460}' received
+2024-12-13 05:39:31,144 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - WAL resume position 'LSN{0/20B0460}' discovered
+2024-12-13 05:39:31,144 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:39:31,198 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector PostgresConnector, id = postgres_cdc_source named = keep-alive
+2024-12-13 05:39:31,198 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-postgresconnector-postgres_cdc_source-keep-alive
+2024-12-13 05:39:31,198 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - Processing messages
+2024-12-13 05:39:31,199 INFO  io.debezium.connector.postgresql.connection.WalPositionLocator [] - Message with LSN 'LSN{0/20B0460}' arrived, switching off the filtering
+2024-12-13 05:39:31,371 INFO  io.debezium.connector.common.BaseSourceTask                  [] - 4 records sent during previous 00:01:51.249, last recorded offset: {transaction_id=null, lsn=34238392, txId=610, ts_usec=1734068370757034}
+2024-12-13 05:39:31,372 INFO  com.ververica.cdc.debezium.internal.DebeziumChangeFetcher    [] - Database snapshot phase can't perform checkpoint, acquired Checkpoint lock.
+2024-12-13 05:39:31,381 INFO  com.ververica.cdc.debezium.internal.DebeziumChangeFetcher    [] - Received record from streaming binlog phase, released checkpoint lock.
+2024-12-13 05:39:32,289 ERROR org.apache.flink.streaming.connectors.elasticsearch.util.NoOpFailureHandler [] - Failed Elasticsearch item request: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	... 18 more
+2024-12-13 05:41:34,764 INFO  io.debezium.connector.common.BaseSourceTask                  [] - 3 records sent during previous 00:02:03.392, last recorded offset: {transaction_id=null, lsn_proc=34286848, lsn_commit=34277432, lsn=34286848, txId=612, ts_usec=1734068494226441}
+2024-12-13 05:41:34,811 WARN  org.apache.flink.runtime.taskmanager.Task                    [] - SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from RUNNING to FAILED with failure cause:
+java.lang.RuntimeException: An error occurred in ElasticsearchSink.
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkErrorAndRethrow(ElasticsearchSinkBase.java:415) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkAsyncErrorsAndRequests(ElasticsearchSinkBase.java:420) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.invoke(ElasticsearchSinkBase.java:317) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.table.runtime.operators.sink.SinkOperator.processElement(SinkOperator.java:65) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.pushToOperator(CopyingChainingOutput.java:75) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:50) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:29) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.api.operators.TimestampedCollector.collect(TimestampedCollector.java:51) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.addRow(SinkUpsertMaterializer.java:170) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.processElement(SinkUpsertMaterializer.java:147) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.RecordProcessorUtils.lambda$getRecordProcessor$0(RecordProcessorUtils.java:60) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.OneInputStreamTask$StreamTaskNetworkOutput.emitRecord(OneInputStreamTask.java:237) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.processElement(AbstractStreamTaskNetworkInput.java:146) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.emitNext(AbstractStreamTaskNetworkInput.java:110) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.StreamOneInputProcessor.processInput(StreamOneInputProcessor.java:65) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.processInput(StreamTask.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.mailbox.MailboxProcessor.runMailboxLoop(MailboxProcessor.java:231) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.runMailboxLoop(StreamTask.java:858) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:807) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:953) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:932) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:746) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+Caused by: java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	... 1 more
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	... 1 more
+2024-12-13 05:41:34,812 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0).
+2024-12-13 05:41:34,815 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state FAILED to JobManager for task SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1)#0 34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0.
+2024-12-13 05:41:34,849 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Attempting to cancel task Source: orders[1] (1/1)#0 (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0).
+2024-12-13 05:41:34,849 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: orders[1] (1/1)#0 (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:41:34,849 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Triggering cancellation of task code Source: orders[1] (1/1)#0 (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0).
+2024-12-13 05:41:34,850 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the embedded engine
+2024-12-13 05:41:34,850 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Waiting for PT5M for connector to stop
+2024-12-13 05:41:34,850 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Attempting to cancel task Source: shipments[3] (1/1)#0 (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0).
+2024-12-13 05:41:34,850 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: shipments[3] (1/1)#0 (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:41:34,850 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Triggering cancellation of task code Source: shipments[3] (1/1)#0 (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0).
+2024-12-13 05:41:34,851 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the embedded engine
+2024-12-13 05:41:34,851 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Waiting for PT5M for connector to stop
+2024-12-13 05:41:34,851 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Attempting to cancel task Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0).
+2024-12-13 05:41:34,851 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:41:34,851 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Triggering cancellation of task code Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0).
+2024-12-13 05:41:34,851 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:41:34,851 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1)#0 (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0).
+2024-12-13 05:41:34,851 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state CANCELED to JobManager for task Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1)#0 34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0.
+2024-12-13 05:41:35,269 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the task and engine
+2024-12-13 05:41:35,269 INFO  io.debezium.connector.common.BaseSourceTask                  [] - Stopping down connector
+2024-12-13 05:41:35,304 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the task and engine
+2024-12-13 05:41:35,304 INFO  io.debezium.connector.common.BaseSourceTask                  [] - Stopping down connector
+2024-12-13 05:41:35,714 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:41:35,716 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Finished streaming
+2024-12-13 05:41:35,717 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Connected metrics set to 'false'
+2024-12-13 05:41:35,723 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:41:35,730 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the embedded engine
+2024-12-13 05:41:35,732 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: orders[1] (1/1)#0 (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:41:35,732 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for Source: orders[1] (1/1)#0 (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0).
+2024-12-13 05:41:35,733 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state CANCELED to JobManager for task Source: orders[1] (1/1)#0 34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0.
+2024-12-13 05:41:35,747 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:41:35,748 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Finished streaming
+2024-12-13 05:41:35,749 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Connected metrics set to 'false'
+2024-12-13 05:41:35,749 INFO  io.debezium.metrics.Metrics                                  [] - Unable to unregister metrics MBean 'debezium.postgres:type=connector-metrics,context=snapshot,server=postgres_cdc_source' as it was not found
+2024-12-13 05:41:35,749 INFO  io.debezium.metrics.Metrics                                  [] - Unable to unregister metrics MBean 'debezium.postgres:type=connector-metrics,context=streaming,server=postgres_cdc_source' as it was not found
+2024-12-13 05:41:35,751 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:41:35,752 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the embedded engine
+2024-12-13 05:41:35,753 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: shipments[3] (1/1)#0 (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:41:35,753 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for Source: shipments[3] (1/1)#0 (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0).
+2024-12-13 05:41:35,753 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state CANCELED to JobManager for task Source: shipments[3] (1/1)#0 34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0.
+2024-12-13 05:41:35,810 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Free slot TaskSlot(index:1, state:ACTIVE, resource profile: ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}, allocationId: 5ee20ecd83c29c497e2781f35e15fc7c, jobId: 07a359e2127ab4414043fa919e0b565a).
+2024-12-13 05:41:35,811 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Remove job 07a359e2127ab4414043fa919e0b565a from job leader monitoring.
+2024-12-13 05:41:35,812 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Close JobManager connection for job 07a359e2127ab4414043fa919e0b565a.
+2024-12-13 05:50:55,558 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Receive slot request e6554f1ee10f8230583b422b2da56b0f for job 5b31fb47dabd13feef3d40965777fa29 from resource manager with leader id 00000000000000000000000000000000.
+2024-12-13 05:50:55,561 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Allocated slot for e6554f1ee10f8230583b422b2da56b0f with resources ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}.
+2024-12-13 05:50:55,561 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Add job 5b31fb47dabd13feef3d40965777fa29 for job leader monitoring.
+2024-12-13 05:50:55,561 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Try to register at job manager pekko.tcp://flink@localhost:6123/user/rpc/jobmanager_3 with leader id 00000000-0000-0000-0000-000000000000.
+2024-12-13 05:50:55,565 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Resolved JobManager address, beginning registration
+2024-12-13 05:50:55,569 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Successful registration at job manager pekko.tcp://flink@localhost:6123/user/rpc/jobmanager_3 for job 5b31fb47dabd13feef3d40965777fa29.
+2024-12-13 05:50:55,569 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Establish JobManager connection for job 5b31fb47dabd13feef3d40965777fa29.
+2024-12-13 05:50:55,569 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Offer reserved slots to the leader of job 5b31fb47dabd13feef3d40965777fa29.
+2024-12-13 05:50:55,575 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot e6554f1ee10f8230583b422b2da56b0f.
+2024-12-13 05:50:55,576 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - Creating a changelog storage with name 'memory'.
+2024-12-13 05:50:55,576 INFO  org.apache.flink.runtime.state.TaskExecutorChannelStateExecutorFactoryManager [] - Creating the channel state executor factory for job id 5b31fb47dabd13feef3d40965777fa29
+2024-12-13 05:50:55,577 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Source: orders[8] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0), deploy into slot with allocation id e6554f1ee10f8230583b422b2da56b0f.
+2024-12-13 05:50:55,577 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot e6554f1ee10f8230583b422b2da56b0f.
+2024-12-13 05:50:55,577 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: orders[8] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CREATED to DEPLOYING.
+2024-12-13 05:50:55,577 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Source: orders[8] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) [DEPLOYING].
+2024-12-13 05:50:55,578 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Source: shipments[10] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0), deploy into slot with allocation id e6554f1ee10f8230583b422b2da56b0f.
+2024-12-13 05:50:55,578 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot e6554f1ee10f8230583b422b2da56b0f.
+2024-12-13 05:50:55,578 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: shipments[10] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) switched from CREATED to DEPLOYING.
+2024-12-13 05:50:55,578 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Source: shipments[10] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) [DEPLOYING].
+2024-12-13 05:50:55,579 INFO  org.apache.flink.runtime.blob.BlobClient                     [] - Downloading 5b31fb47dabd13feef3d40965777fa29/p-88f813b42aacd4cf2a7baaadc55d1e40525f4d06-7b67d0b6737c37fbdb5dfb42605fab23 from localhost/127.0.0.1:51120
+2024-12-13 05:50:55,580 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0), deploy into slot with allocation id e6554f1ee10f8230583b422b2da56b0f.
+2024-12-13 05:50:55,580 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot e6554f1ee10f8230583b422b2da56b0f.
+2024-12-13 05:50:55,580 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from CREATED to DEPLOYING.
+2024-12-13 05:50:55,580 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) [DEPLOYING].
+2024-12-13 05:50:55,581 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0), deploy into slot with allocation id e6554f1ee10f8230583b422b2da56b0f.
+2024-12-13 05:50:55,581 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot e6554f1ee10f8230583b422b2da56b0f.
+2024-12-13 05:50:55,581 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from CREATED to DEPLOYING.
+2024-12-13 05:50:55,581 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) [DEPLOYING].
+2024-12-13 05:50:55,585 INFO  org.apache.flink.runtime.blob.BlobClient                     [] - Downloading 5b31fb47dabd13feef3d40965777fa29/p-6ae470fe55e422f67921346ffff4e17ac72a9fe7-2df2f097aa5439706b4e78d0a08b0e00 from localhost/127.0.0.1:51120
+2024-12-13 05:50:55,631 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@15a04c93
+2024-12-13 05:50:55,631 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-12-13 05:50:55,631 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-12-13 05:50:55,631 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:50:55,634 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@d7e4507
+2024-12-13 05:50:55,634 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@2ea8c031
+2024-12-13 05:50:55,634 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-12-13 05:50:55,634 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-12-13 05:50:55,634 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-12-13 05:50:55,634 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-12-13 05:50:55,634 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@2e5b9e1
+2024-12-13 05:50:55,634 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-12-13 05:50:55,634 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-12-13 05:50:55,634 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: shipments[10] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:50:55,634 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:50:55,635 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: orders[8] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:50:55,646 INFO  com.ververica.cdc.debezium.DebeziumSourceFunction            [] - Consumer subtask 0 has no restore state.
+2024-12-13 05:50:55,646 INFO  com.ververica.cdc.debezium.DebeziumSourceFunction            [] - Consumer subtask 0 has no restore state.
+2024-12-13 05:50:55,647 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: shipments[10] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:50:55,647 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: orders[8] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:50:55,651 INFO  org.apache.flink.streaming.connectors.elasticsearch7.Elasticsearch7ApiCallBridge [] - Pinging Elasticsearch cluster via hosts [https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243] ...
+2024-12-13 05:50:55,652 INFO  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverterConfig [] - JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+
+2024-12-13 05:50:55,652 INFO  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverterConfig [] - JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+
+2024-12-13 05:50:55,653 INFO  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverterConfig [] - JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+
+2024-12-13 05:50:55,653 INFO  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverterConfig [] - JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+
+2024-12-13 05:50:55,653 INFO  io.debezium.embedded.EmbeddedEngine$EmbeddedConfig           [] - EmbeddedConfig values: 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	admin.listeners = null
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	config.providers = []
+	connector.client.config.override.policy = All
+	header.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.storage.SimpleHeaderConverter
+	key.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+	listeners = [http://:8083]
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	offset.flush.interval.ms = 9223372036854775807
+	offset.flush.timeout.ms = 5000
+	offset.storage.file.filename = 
+	offset.storage.partitions = null
+	offset.storage.replication.factor = null
+	offset.storage.topic = 
+	plugin.path = null
+	response.http.headers.config = 
+	rest.advertised.host.name = null
+	rest.advertised.listener = null
+	rest.advertised.port = null
+	rest.extension.classes = []
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	task.shutdown.graceful.timeout.ms = 5000
+	topic.creation.enable = true
+	topic.tracking.allow.reset = true
+	topic.tracking.enable = true
+	value.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+
+2024-12-13 05:50:55,653 INFO  io.debezium.embedded.EmbeddedEngine$EmbeddedConfig           [] - EmbeddedConfig values: 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	admin.listeners = null
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	config.providers = []
+	connector.client.config.override.policy = All
+	header.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.storage.SimpleHeaderConverter
+	key.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+	listeners = [http://:8083]
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	offset.flush.interval.ms = 9223372036854775807
+	offset.flush.timeout.ms = 5000
+	offset.storage.file.filename = 
+	offset.storage.partitions = null
+	offset.storage.replication.factor = null
+	offset.storage.topic = 
+	plugin.path = null
+	response.http.headers.config = 
+	rest.advertised.host.name = null
+	rest.advertised.listener = null
+	rest.advertised.port = null
+	rest.extension.classes = []
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	task.shutdown.graceful.timeout.ms = 5000
+	topic.creation.enable = true
+	topic.tracking.allow.reset = true
+	topic.tracking.enable = true
+	value.converter = class com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+
+2024-12-13 05:50:55,653 WARN  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.runtime.WorkerConfig [] - The worker has been configured with one or more internal converter properties ([internal.key.converter, internal.value.converter]). Support for these properties was deprecated in version 2.0 and removed in version 3.0, and specifying them will have no effect. Instead, an instance of the JsonConverter with schemas.enable set to false will be used. For more information, please visit http://kafka.apache.org/documentation/#upgrade and consult the upgrade notesfor the 3.0 release.
+2024-12-13 05:50:55,654 WARN  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.runtime.WorkerConfig [] - Variables cannot be used in the 'plugin.path' property, since the property is used by plugin scanning before the config providers that replace the variables are initialized. The raw value 'null' was used for plugin scanning, as opposed to the transformed value 'null', and this may cause unexpected results.
+2024-12-13 05:50:55,654 WARN  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.runtime.WorkerConfig [] - The worker has been configured with one or more internal converter properties ([internal.key.converter, internal.value.converter]). Support for these properties was deprecated in version 2.0 and removed in version 3.0, and specifying them will have no effect. Instead, an instance of the JsonConverter with schemas.enable set to false will be used. For more information, please visit http://kafka.apache.org/documentation/#upgrade and consult the upgrade notesfor the 3.0 release.
+2024-12-13 05:50:55,654 WARN  com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.runtime.WorkerConfig [] - Variables cannot be used in the 'plugin.path' property, since the property is used by plugin scanning before the config providers that replace the variables are initialized. The raw value 'null' was used for plugin scanning, as opposed to the transformed value 'null', and this may cause unexpected results.
+2024-12-13 05:50:55,654 WARN  io.debezium.connector.postgresql.PostgresConnectorConfig     [] - Configuration property 'truncate.handling.mode' is deprecated and will be removed in future versions. Please use 'skipped.operations' instead.
+2024-12-13 05:50:55,654 WARN  io.debezium.connector.postgresql.PostgresConnectorConfig     [] - Configuration property 'truncate.handling.mode' is deprecated and will be removed in future versions. Please use 'skipped.operations' instead.
+2024-12-13 05:50:55,654 WARN  io.debezium.connector.postgresql.PostgresConnectorConfig     [] - Configuration property 'toasted.value.placeholder' is deprecated and will be removed in future versions. Please use 'unavailable.value.placeholder' instead.
+2024-12-13 05:50:55,654 WARN  io.debezium.connector.postgresql.PostgresConnectorConfig     [] - Configuration property 'toasted.value.placeholder' is deprecated and will be removed in future versions. Please use 'unavailable.value.placeholder' instead.
+2024-12-13 05:50:55,654 INFO  io.debezium.connector.common.BaseSourceTask                  [] - Starting PostgresConnectorTask with configuration:
+2024-12-13 05:50:55,654 INFO  io.debezium.connector.common.BaseSourceTask                  [] - Starting PostgresConnectorTask with configuration:
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    connector.class = io.debezium.connector.postgresql.PostgresConnector
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    connector.class = io.debezium.connector.postgresql.PostgresConnector
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    slot.name = flink_orders
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    slot.name = flink_shipments
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    schema.include.list = public
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    schema.include.list = public
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    include.schema.changes = false
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    include.schema.changes = false
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    tombstones.on.delete = false
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    tombstones.on.delete = false
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.storage.file.filename = 
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.storage.file.filename = 
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    value.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    value.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.history.instance.name = 44d0750e-6b35-48cd-b044-d3e8b612b9d4
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.history.instance.name = 11d05aec-2742-4d00-b7cf-54328e90f019
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    key.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    key.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.user = postgres
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.user = postgres
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.dbname = postgres
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.dbname = postgres
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.storage = com.ververica.cdc.debezium.internal.FlinkOffsetBackingStore
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.storage = com.ververica.cdc.debezium.internal.FlinkOffsetBackingStore
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.server.name = postgres_cdc_source
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.server.name = postgres_cdc_source
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.flush.timeout.ms = 5000
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    heartbeat.interval.ms = 300000
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.port = 5434
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.flush.timeout.ms = 5000
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    plugin.name = decoderbufs
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    heartbeat.interval.ms = 300000
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.flush.interval.ms = 9223372036854775807
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.port = 5434
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    internal.key.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    plugin.name = decoderbufs
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.hostname = localhost
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    offset.flush.interval.ms = 9223372036854775807
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.password = ********
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    internal.key.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    name = engine
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.hostname = localhost
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    internal.value.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    table.include.list = public.orders
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.password = ********
+2024-12-13 05:50:55,655 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.history = com.ververica.cdc.debezium.internal.FlinkDatabaseSchemaHistory
+2024-12-13 05:50:55,656 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    name = engine
+2024-12-13 05:50:55,656 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    internal.value.converter = com.ververica.cdc.connectors.shaded.org.apache.kafka.connect.json.JsonConverter
+2024-12-13 05:50:55,656 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    table.include.list = public.shipments
+2024-12-13 05:50:55,656 INFO  io.debezium.connector.common.BaseSourceTask                  [] -    database.history = com.ververica.cdc.debezium.internal.FlinkDatabaseSchemaHistory
+2024-12-13 05:50:55,665 INFO  org.apache.flink.runtime.state.heap.HeapKeyedStateBackendBuilder [] - Finished to build heap keyed state-backend.
+2024-12-13 05:50:55,665 INFO  org.apache.flink.runtime.state.heap.HeapKeyedStateBackend    [] - Initializing heap keyed state backend with stream factory.
+2024-12-13 05:50:55,670 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:50:55,719 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:50:55,719 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:50:55,891 INFO  org.apache.flink.streaming.connectors.elasticsearch7.Elasticsearch7ApiCallBridge [] - Elasticsearch RestHighLevelClient is connected to [https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243]
+2024-12-13 05:50:55,893 INFO  org.apache.flink.runtime.state.heap.HeapKeyedStateBackendBuilder [] - Finished to build heap keyed state-backend.
+2024-12-13 05:50:55,893 INFO  org.apache.flink.runtime.state.heap.HeapKeyedStateBackend    [] - Initializing heap keyed state backend with stream factory.
+2024-12-13 05:50:55,901 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:50:55,918 INFO  io.debezium.connector.common.BaseSourceTask                  [] - No previous offsets found
+2024-12-13 05:50:55,936 INFO  io.debezium.connector.postgresql.PostgresConnectorTask       [] - user 'postgres' connected to database 'postgres' on PostgreSQL 11.12 (Debian 11.12-1.pgdg90+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516, 64-bit with roles:
+	role 'pg_read_all_settings' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_stat_scan_tables' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_write_server_files' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_monitor' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_read_server_files' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_execute_server_program' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_read_all_stats' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_signal_backend' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'postgres' [superuser: true, replication: true, inherit: true, create role: true, create db: true, can log in: true]
+2024-12-13 05:50:55,936 INFO  io.debezium.connector.common.BaseSourceTask                  [] - No previous offsets found
+2024-12-13 05:50:55,944 INFO  io.debezium.connector.postgresql.connection.PostgresConnection [] - Obtained valid replication slot ReplicationSlot [active=false, latestFlushedLsn=LSN{0/20A6FB8}, catalogXmin=608]
+2024-12-13 05:50:55,945 INFO  io.debezium.connector.postgresql.PostgresConnectorTask       [] - No previous offset found
+2024-12-13 05:50:55,945 INFO  io.debezium.connector.postgresql.snapshot.InitialSnapshotter [] - Taking initial snapshot for new datasource
+2024-12-13 05:50:55,947 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector PostgresConnector, id = postgres_cdc_source named = change-event-source-coordinator
+2024-12-13 05:50:55,948 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-postgresconnector-postgres_cdc_source-change-event-source-coordinator
+2024-12-13 05:50:55,949 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Metrics registered
+2024-12-13 05:50:55,949 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Context created
+2024-12-13 05:50:55,949 INFO  io.debezium.connector.postgresql.snapshot.InitialSnapshotter [] - Taking initial snapshot for new datasource
+2024-12-13 05:50:55,949 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - According to the connector configuration data will be snapshotted
+2024-12-13 05:50:55,949 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 1 - Preparing
+2024-12-13 05:50:55,950 INFO  io.debezium.connector.postgresql.PostgresConnectorTask       [] - user 'postgres' connected to database 'postgres' on PostgreSQL 11.12 (Debian 11.12-1.pgdg90+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516, 64-bit with roles:
+	role 'pg_read_all_settings' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_stat_scan_tables' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_write_server_files' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_monitor' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_read_server_files' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_execute_server_program' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_read_all_stats' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'pg_signal_backend' [superuser: false, replication: false, inherit: true, create role: false, create db: false, can log in: false]
+	role 'postgres' [superuser: true, replication: true, inherit: true, create role: true, create db: true, can log in: true]
+2024-12-13 05:50:55,958 INFO  io.debezium.connector.postgresql.connection.PostgresConnection [] - Obtained valid replication slot ReplicationSlot [active=false, latestFlushedLsn=LSN{0/20A6FF0}, catalogXmin=608]
+2024-12-13 05:50:55,958 INFO  io.debezium.connector.postgresql.PostgresConnectorTask       [] - No previous offset found
+2024-12-13 05:50:55,958 INFO  io.debezium.connector.postgresql.snapshot.InitialSnapshotter [] - Taking initial snapshot for new datasource
+2024-12-13 05:50:55,959 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector PostgresConnector, id = postgres_cdc_source named = change-event-source-coordinator
+2024-12-13 05:50:55,959 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-postgresconnector-postgres_cdc_source-change-event-source-coordinator
+2024-12-13 05:50:55,960 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 1 out of 12)
+2024-12-13 05:50:56,031 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 2 - Determining captured tables
+2024-12-13 05:50:56,060 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.geom to the list of capture schema tables
+2024-12-13 05:50:56,060 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.products_on_hand to the list of capture schema tables
+2024-12-13 05:50:56,060 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table public.orders to the list of capture schema tables
+2024-12-13 05:50:56,060 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.customers to the list of capture schema tables
+2024-12-13 05:50:56,060 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.orders to the list of capture schema tables
+2024-12-13 05:50:56,060 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.products to the list of capture schema tables
+2024-12-13 05:50:56,060 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table public.shipments to the list of capture schema tables
+2024-12-13 05:50:56,060 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 3 - Locking captured tables [public.orders]
+2024-12-13 05:50:56,061 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 4 - Determining snapshot offset
+2024-12-13 05:50:56,061 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Creating initial offset context
+2024-12-13 05:50:56,099 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Read xlogStart at 'LSN{0/20B2ED8}' from transaction '613'
+2024-12-13 05:50:56,114 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Read xlogStart at 'LSN{0/20B2ED8}' from transaction '613'
+2024-12-13 05:50:56,114 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 5 - Reading structure of captured tables
+2024-12-13 05:50:56,114 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Reading structure of schema 'public' of catalog 'postgres'
+2024-12-13 05:50:56,181 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 6 - Persisting schema history
+2024-12-13 05:50:56,181 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 7 - Snapshotting data
+2024-12-13 05:50:56,181 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshotting contents of 1 tables while still in transaction
+2024-12-13 05:50:56,181 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Exporting data from table 'public.orders' (1 of 1 tables)
+2024-12-13 05:50:56,182 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - 	 For table 'public.orders' using select statement: 'SELECT "order_id", "customer_name", "order_date" FROM "public"."orders"'
+2024-12-13 05:50:56,201 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - 	 Finished exporting 6 records for table 'public.orders'; total duration '00:00:00.02'
+2024-12-13 05:50:56,204 INFO  io.debezium.pipeline.source.AbstractSnapshotChangeEventSource [] - Snapshot - Final stage
+2024-12-13 05:50:56,204 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Snapshot ended with SnapshotResult [status=COMPLETED, offset=PostgresOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.postgresql.Source:STRUCT}, sourceInfo=source_info[server='postgres_cdc_source'db='postgres', lsn=LSN{0/20B2ED8}, txId=613, timestamp=2024-12-13T05:50:55.934786Z, snapshot=FALSE, schema=public, table=orders], lastSnapshotRecord=true, lastCompletelyProcessedLsn=null, lastCommitLsn=null, streamingStoppingLsn=null, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], incrementalSnapshotContext=IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]]]
+2024-12-13 05:50:56,205 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Connected metrics set to 'true'
+2024-12-13 05:50:56,238 INFO  io.debezium.connector.postgresql.PostgresSchema              [] - REPLICA IDENTITY for 'public.orders' is 'FULL'; UPDATE AND DELETE events will contain the previous values of all the columns
+2024-12-13 05:50:56,238 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Starting streaming
+2024-12-13 05:50:56,238 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - Retrieved latest position from stored offset 'LSN{0/20B2ED8}'
+2024-12-13 05:50:56,238 INFO  io.debezium.connector.postgresql.connection.WalPositionLocator [] - Looking for WAL restart position for last commit LSN 'null' and last change LSN 'LSN{0/20B2ED8}'
+2024-12-13 05:50:56,331 INFO  io.debezium.connector.postgresql.connection.PostgresConnection [] - Obtained valid replication slot ReplicationSlot [active=false, latestFlushedLsn=LSN{0/20A6FB8}, catalogXmin=608]
+2024-12-13 05:50:56,331 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:50:56,390 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector PostgresConnector, id = postgres_cdc_source named = keep-alive
+2024-12-13 05:50:56,391 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-postgresconnector-postgres_cdc_source-keep-alive
+2024-12-13 05:50:56,428 INFO  io.debezium.connector.postgresql.PostgresSchema              [] - REPLICA IDENTITY for 'public.orders' is 'FULL'; UPDATE AND DELETE events will contain the previous values of all the columns
+2024-12-13 05:50:56,432 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - Searching for WAL resume position
+2024-12-13 05:50:56,450 INFO  com.ververica.cdc.debezium.internal.DebeziumChangeFetcher    [] - Database snapshot phase can't perform checkpoint, acquired Checkpoint lock.
+2024-12-13 05:50:56,456 INFO  com.ververica.cdc.debezium.internal.DebeziumChangeFetcher    [] - Received record from streaming binlog phase, released checkpoint lock.
+2024-12-13 05:50:56,939 ERROR org.apache.flink.streaming.connectors.elasticsearch.util.NoOpFailureHandler [] - Failed Elasticsearch item request: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	... 18 more
+2024-12-13 05:51:00,968 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 2 out of 12)
+2024-12-13 05:51:05,973 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 3 out of 12)
+2024-12-13 05:51:10,982 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 4 out of 12)
+2024-12-13 05:51:15,988 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 5 out of 12)
+2024-12-13 05:51:20,993 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 6 out of 12)
+2024-12-13 05:51:25,997 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 7 out of 12)
+2024-12-13 05:51:31,000 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 8 out of 12)
+2024-12-13 05:51:36,010 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 9 out of 12)
+2024-12-13 05:51:41,015 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 10 out of 12)
+2024-12-13 05:51:46,019 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 11 out of 12)
+2024-12-13 05:51:51,024 ERROR io.debezium.metrics.Metrics                                  [] - Failed to register metrics MBean, metrics will not be available
+2024-12-13 05:51:51,025 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 1 out of 12)
+2024-12-13 05:51:56,029 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 2 out of 12)
+2024-12-13 05:52:01,039 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 3 out of 12)
+2024-12-13 05:52:05,272 INFO  io.debezium.connector.postgresql.connection.WalPositionLocator [] - First LSN 'LSN{0/20B2F38}' received
+2024-12-13 05:52:05,274 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - WAL resume position 'LSN{0/20B2F38}' discovered
+2024-12-13 05:52:05,276 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:52:05,349 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector PostgresConnector, id = postgres_cdc_source named = keep-alive
+2024-12-13 05:52:05,349 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-postgresconnector-postgres_cdc_source-keep-alive
+2024-12-13 05:52:05,351 INFO  io.debezium.connector.postgresql.PostgresStreamingChangeEventSource [] - Processing messages
+2024-12-13 05:52:05,351 INFO  io.debezium.connector.postgresql.connection.WalPositionLocator [] - Message with LSN 'LSN{0/20B2F38}' arrived, switching off the filtering
+2024-12-13 05:52:05,395 INFO  io.debezium.connector.common.BaseSourceTask                  [] - 8 records sent during previous 00:01:09.74, last recorded offset: {transaction_id=null, lsn_proc=34287416, lsn=34287416, txId=614, ts_usec=1734069124883271}
+2024-12-13 05:52:05,525 WARN  org.apache.flink.runtime.taskmanager.Task                    [] - SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from RUNNING to FAILED with failure cause:
+java.lang.RuntimeException: An error occurred in ElasticsearchSink.
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkErrorAndRethrow(ElasticsearchSinkBase.java:415) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkAsyncErrorsAndRequests(ElasticsearchSinkBase.java:420) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.invoke(ElasticsearchSinkBase.java:317) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.table.runtime.operators.sink.SinkOperator.processElement(SinkOperator.java:65) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.pushToOperator(CopyingChainingOutput.java:75) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:50) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:29) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.api.operators.TimestampedCollector.collect(TimestampedCollector.java:51) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.retractRow(SinkUpsertMaterializer.java:189) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.processElement(SinkUpsertMaterializer.java:152) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.RecordProcessorUtils.lambda$getRecordProcessor$0(RecordProcessorUtils.java:60) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.OneInputStreamTask$StreamTaskNetworkOutput.emitRecord(OneInputStreamTask.java:237) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.processElement(AbstractStreamTaskNetworkInput.java:146) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.emitNext(AbstractStreamTaskNetworkInput.java:110) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.StreamOneInputProcessor.processInput(StreamOneInputProcessor.java:65) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.processInput(StreamTask.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.mailbox.MailboxProcessor.runMailboxLoop(MailboxProcessor.java:231) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.runMailboxLoop(StreamTask.java:858) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:807) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:953) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:932) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:746) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+Caused by: java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	... 1 more
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	... 1 more
+2024-12-13 05:52:05,527 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0).
+2024-12-13 05:52:05,528 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state FAILED to JobManager for task SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1)#0 88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0.
+2024-12-13 05:52:05,538 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Attempting to cancel task Source: orders[8] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0).
+2024-12-13 05:52:05,538 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: orders[8] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:52:05,538 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Triggering cancellation of task code Source: orders[8] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0).
+2024-12-13 05:52:05,538 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the embedded engine
+2024-12-13 05:52:05,539 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Waiting for PT5M for connector to stop
+2024-12-13 05:52:05,539 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Attempting to cancel task Source: shipments[10] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0).
+2024-12-13 05:52:05,539 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: shipments[10] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:52:05,539 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Triggering cancellation of task code Source: shipments[10] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0).
+2024-12-13 05:52:05,539 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the embedded engine
+2024-12-13 05:52:05,539 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Waiting for PT5M for connector to stop
+2024-12-13 05:52:05,539 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Attempting to cancel task Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0).
+2024-12-13 05:52:05,539 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:52:05,539 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Triggering cancellation of task code Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0).
+2024-12-13 05:52:05,540 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:52:05,540 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0).
+2024-12-13 05:52:05,540 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state CANCELED to JobManager for task Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1)#0 88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0.
+2024-12-13 05:52:05,899 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the task and engine
+2024-12-13 05:52:05,900 INFO  io.debezium.connector.common.BaseSourceTask                  [] - Stopping down connector
+2024-12-13 05:52:06,000 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the task and engine
+2024-12-13 05:52:06,000 INFO  io.debezium.connector.common.BaseSourceTask                  [] - Stopping down connector
+2024-12-13 05:52:06,041 WARN  io.debezium.metrics.Metrics                                  [] - Unable to register metrics as an old set with the same name exists, retrying in PT5S (attempt 4 out of 12)
+2024-12-13 05:52:06,373 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:52:06,374 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Finished streaming
+2024-12-13 05:52:06,374 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Connected metrics set to 'false'
+2024-12-13 05:52:06,377 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:52:06,378 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the embedded engine
+2024-12-13 05:52:06,378 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: orders[8] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:52:06,378 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for Source: orders[8] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0).
+2024-12-13 05:52:06,378 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state CANCELED to JobManager for task Source: orders[8] (1/1)#0 88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0.
+2024-12-13 05:52:11,043 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Metrics registered
+2024-12-13 05:52:11,043 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Context created
+2024-12-13 05:52:11,044 INFO  io.debezium.connector.postgresql.snapshot.InitialSnapshotter [] - Taking initial snapshot for new datasource
+2024-12-13 05:52:11,044 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - According to the connector configuration data will be snapshotted
+2024-12-13 05:52:11,044 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 1 - Preparing
+2024-12-13 05:52:11,223 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 2 - Determining captured tables
+2024-12-13 05:52:11,230 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.geom to the list of capture schema tables
+2024-12-13 05:52:11,230 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.products_on_hand to the list of capture schema tables
+2024-12-13 05:52:11,230 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table public.orders to the list of capture schema tables
+2024-12-13 05:52:11,230 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.customers to the list of capture schema tables
+2024-12-13 05:52:11,230 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.orders to the list of capture schema tables
+2024-12-13 05:52:11,230 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table inventory.products to the list of capture schema tables
+2024-12-13 05:52:11,230 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Adding table public.shipments to the list of capture schema tables
+2024-12-13 05:52:11,230 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 3 - Locking captured tables [public.shipments]
+2024-12-13 05:52:11,230 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 4 - Determining snapshot offset
+2024-12-13 05:52:11,230 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Creating initial offset context
+2024-12-13 05:52:11,233 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Read xlogStart at 'LSN{0/20B31D0}' from transaction '615'
+2024-12-13 05:52:11,235 INFO  io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource [] - Read xlogStart at 'LSN{0/20B31D0}' from transaction '615'
+2024-12-13 05:52:11,235 INFO  io.debezium.relational.RelationalSnapshotChangeEventSource   [] - Snapshot step 5 - Reading structure of captured tables
+2024-12-13 05:52:11,238 WARN  io.debezium.pipeline.source.AbstractSnapshotChangeEventSource [] - Snapshot was interrupted before completion
+2024-12-13 05:52:11,238 INFO  io.debezium.pipeline.source.AbstractSnapshotChangeEventSource [] - Snapshot - Final stage
+2024-12-13 05:52:11,238 WARN  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Change event source executor was interrupted
+java.lang.InterruptedException: Interrupted while reading structure of schema public
+	at io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource.readTableStructure(PostgresSnapshotChangeEventSource.java:192) ~[flink-sql-connector-postgres-cdc-2.4.2.jar:2.4.2]
+	at io.debezium.connector.postgresql.PostgresSnapshotChangeEventSource.readTableStructure(PostgresSnapshotChangeEventSource.java:31) ~[flink-sql-connector-postgres-cdc-2.4.2.jar:2.4.2]
+	at io.debezium.relational.RelationalSnapshotChangeEventSource.doExecute(RelationalSnapshotChangeEventSource.java:116) ~[flink-sql-connector-mysql-cdc-3.0.0.jar:3.0.0]
+	at io.debezium.pipeline.source.AbstractSnapshotChangeEventSource.execute(AbstractSnapshotChangeEventSource.java:76) ~[flink-sql-connector-mysql-cdc-3.0.0.jar:3.0.0]
+	at io.debezium.pipeline.ChangeEventSourceCoordinator.doSnapshot(ChangeEventSourceCoordinator.java:155) ~[flink-sql-connector-mysql-cdc-3.0.0.jar:3.0.0]
+	at io.debezium.pipeline.ChangeEventSourceCoordinator.executeChangeEventSources(ChangeEventSourceCoordinator.java:137) ~[flink-sql-connector-mysql-cdc-3.0.0.jar:3.0.0]
+	at io.debezium.pipeline.ChangeEventSourceCoordinator.lambda$start$0(ChangeEventSourceCoordinator.java:109) ~[flink-sql-connector-mysql-cdc-3.0.0.jar:3.0.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2024-12-13 05:52:11,238 INFO  io.debezium.pipeline.ChangeEventSourceCoordinator            [] - Connected metrics set to 'false'
+2024-12-13 05:52:11,239 INFO  io.debezium.metrics.Metrics                                  [] - Unable to unregister metrics MBean 'debezium.postgres:type=connector-metrics,context=snapshot,server=postgres_cdc_source' as it was not found
+2024-12-13 05:52:11,239 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-12-13 05:52:11,240 INFO  io.debezium.embedded.EmbeddedEngine                          [] - Stopping the embedded engine
+2024-12-13 05:52:11,240 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: shipments[10] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:52:11,240 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for Source: shipments[10] (1/1)#0 (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0).
+2024-12-13 05:52:11,240 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state CANCELED to JobManager for task Source: shipments[10] (1/1)#0 88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0.
+2024-12-13 05:52:11,250 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Free slot TaskSlot(index:2, state:ACTIVE, resource profile: ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}, allocationId: e6554f1ee10f8230583b422b2da56b0f, jobId: 5b31fb47dabd13feef3d40965777fa29).
+2024-12-13 05:52:11,251 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Remove job 5b31fb47dabd13feef3d40965777fa29 from job leader monitoring.
+2024-12-13 05:52:11,251 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Close JobManager connection for job 5b31fb47dabd13feef3d40965777fa29.
+2024-12-13 05:58:11,773 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - RECEIVED SIGNAL 15: SIGTERM. Shutting down as requested.
+2024-12-13 05:58:11,775 INFO  org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager [] - Shutting down TaskExecutorLocalStateStoresManager.
+2024-12-13 05:58:11,775 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Shutting down BLOB cache
+2024-12-13 05:58:11,776 INFO  org.apache.flink.runtime.state.TaskExecutorStateChangelogStoragesManager [] - Shutting down TaskExecutorStateChangelogStoragesManager.
+2024-12-13 05:58:11,776 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Shutting down BLOB cache
+2024-12-13 05:58:11,778 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Stopping TaskExecutor pekko.tcp://flink@localhost:51123/user/rpc/taskmanager_0.
+2024-12-13 05:58:11,778 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Close ResourceManager connection 145b2cb1d2dfd3e301c6541aed1cf633.

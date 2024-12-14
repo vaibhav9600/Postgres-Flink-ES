@@ -1,0 +1,1170 @@
+2024-12-13 05:25:56,866 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2024-12-13 05:25:56,867 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Preconfiguration: 
+2024-12-13 05:25:56,867 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - 
+
+
+RESOURCE_PARAMS extraction logs:
+jvm_params: -Xmx1073741824 -Xms1073741824 -XX:MaxMetaspaceSize=268435456
+dynamic_configs: -D jobmanager.memory.off-heap.size=134217728b -D jobmanager.memory.jvm-overhead.min=201326592b -D jobmanager.memory.jvm-metaspace.size=268435456b -D jobmanager.memory.heap.size=1073741824b -D jobmanager.memory.jvm-overhead.max=201326592b
+logs: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+INFO  [] - Loading configuration property: env.java.opts.jobmanager, -Duser.timezone=UTC
+INFO  [] - Loading configuration property: taskmanager.bind-host, localhost
+INFO  [] - Loading configuration property: env.java.opts, -Duser.timezone=UTC
+INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+INFO  [] - Loading configuration property: table.local-time-zone, UTC
+INFO  [] - Loading configuration property: jobmanager.rpc.address, localhost
+INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+INFO  [] - Loading configuration property: rest.bind-address, localhost
+INFO  [] - Loading configuration property: jobmanager.bind-host, localhost
+INFO  [] - Loading configuration property: taskmanager.host, localhost
+INFO  [] - Loading configuration property: parallelism.default, 1
+INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+INFO  [] - Loading configuration property: rest.address, localhost
+INFO  [] - Loading configuration property: env.java.opts.taskmanager, -Duser.timezone=UTC
+INFO  [] - Loading configuration property: env.java.opts.all, --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+INFO  [] - The derived from fraction jvm overhead memory (160.000mb (167772162 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+INFO  [] - Final Master Memory configuration:
+INFO  [] -   Total Process Memory: 1.563gb (1677721600 bytes)
+INFO  [] -     Total Flink Memory: 1.125gb (1207959552 bytes)
+INFO  [] -       JVM Heap:         1024.000mb (1073741824 bytes)
+INFO  [] -       Off-heap:         128.000mb (134217728 bytes)
+INFO  [] -     JVM Metaspace:      256.000mb (268435456 bytes)
+INFO  [] -     JVM Overhead:       192.000mb (201326592 bytes)
+
+2024-12-13 05:25:56,867 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2024-12-13 05:25:56,867 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Starting StandaloneSessionClusterEntrypoint (Version: 1.18.0, Scala: 2.12, Rev:a5548cc, Date:2023-10-18T22:09:35+02:00)
+2024-12-13 05:25:56,867 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  OS current user: vaibhavmishra
+2024-12-13 05:25:56,867 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM: Java HotSpot(TM) 64-Bit Server VM - Oracle Corporation - 23/23.0.1+11-39
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Arch: aarch64
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Maximum heap size: 1024 MiBytes
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JAVA_HOME: (not set)
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  No Hadoop Dependency available
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM Options:
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xmx1073741824
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xms1073741824
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -XX:MaxMetaspaceSize=268435456
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -XX:+IgnoreUnrecognizedVMOptions
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=java.base/sun.net.util=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.lang=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.net=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.io=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.nio=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+2024-12-13 05:25:56,868 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.text=ALL-UNNAMED
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.time=ALL-UNNAMED
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util=ALL-UNNAMED
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Duser.timezone=UTC
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog.file=/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/log/flink-vaibhavmishra-standalonesession-0-IM-BAN-LAP-0525.local.log
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configuration=file:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/conf/log4j.properties
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configurationFile=file:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/conf/log4j.properties
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlogback.configurationFile=file:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/conf/logback.xml
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Program Arguments:
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.off-heap.size=134217728b
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.min=201326592b
+2024-12-13 05:25:56,869 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-12-13 05:25:56,870 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-metaspace.size=268435456b
+2024-12-13 05:25:56,870 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-12-13 05:25:56,870 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.heap.size=1073741824b
+2024-12-13 05:25:56,870 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-12-13 05:25:56,870 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.max=201326592b
+2024-12-13 05:25:56,870 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --configDir
+2024-12-13 05:25:56,870 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     /Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/conf
+2024-12-13 05:25:56,870 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --executionMode
+2024-12-13 05:25:56,870 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     cluster
+2024-12-13 05:25:56,870 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Classpath: /Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-cep-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-connector-files-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-csv-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-json-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-scala_2.12-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-sql-connector-elasticsearch7-3.0.1.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-sql-connector-mysql-cdc-3.0.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-sql-connector-postgres-cdc-2.4.2.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-table-api-java-uber-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-table-planner-loader-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-table-runtime-1.18.0.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/log4j-1.2-api-2.17.1.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/log4j-api-2.17.1.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/log4j-core-2.17.1.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/log4j-slf4j-impl-2.17.1.jar:/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/lib/flink-dist-1.18.0.jar::::
+2024-12-13 05:25:56,870 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2024-12-13 05:25:56,871 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.jobmanager, -Duser.timezone=UTC
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, localhost
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts, -Duser.timezone=UTC
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: table.local-time-zone, UTC
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, localhost
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, localhost
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, localhost
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.host, localhost
+2024-12-13 05:25:56,878 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2024-12-13 05:25:56,879 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2024-12-13 05:25:56,879 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, localhost
+2024-12-13 05:25:56,879 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.taskmanager, -Duser.timezone=UTC
+2024-12-13 05:25:56,879 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.all, --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED
+2024-12-13 05:25:56,879 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.off-heap.size, 134217728b
+2024-12-13 05:25:56,879 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.min, 201326592b
+2024-12-13 05:25:56,879 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-metaspace.size, 268435456b
+2024-12-13 05:25:56,879 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.heap.size, 1073741824b
+2024-12-13 05:25:56,879 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.max, 201326592b
+2024-12-13 05:25:56,904 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Starting StandaloneSessionClusterEntrypoint.
+2024-12-13 05:25:56,922 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install default filesystem.
+2024-12-13 05:25:56,925 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2024-12-13 05:25:56,935 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+2024-12-13 05:25:56,939 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+2024-12-13 05:25:56,940 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+2024-12-13 05:25:56,940 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+2024-12-13 05:25:56,940 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+2024-12-13 05:25:56,940 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+2024-12-13 05:25:56,940 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+2024-12-13 05:25:56,940 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+2024-12-13 05:25:56,951 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install security context.
+2024-12-13 05:25:56,963 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2024-12-13 05:25:56,966 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/jaas-8161558342185394640.conf.
+2024-12-13 05:25:56,970 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+2024-12-13 05:25:56,971 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Initializing cluster services.
+2024-12-13 05:25:56,977 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Using working directory: WorkingDirectory(/var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/jm_145b2cb1d2dfd3e301c6541aed1cf633).
+2024-12-13 05:25:57,149 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address localhost:6123, bind address localhost:6123.
+2024-12-13 05:25:57,458 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2024-12-13 05:25:57,471 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2024-12-13 05:25:57,471 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+2024-12-13 05:25:57,555 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink@localhost:6123]
+2024-12-13 05:25:57,613 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink@localhost:6123
+2024-12-13 05:25:57,623 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Loading delegation token providers
+2024-12-13 05:25:57,625 INFO  org.apache.flink.runtime.security.token.hadoop.HadoopFSDelegationTokenProvider [] - Hadoop FS is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/conf/Configuration".
+2024-12-13 05:25:57,625 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hadoopfs loaded and initialized
+2024-12-13 05:25:57,626 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hbase loaded and initialized
+2024-12-13 05:25:57,626 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2024-12-13 05:25:57,626 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2024-12-13 05:25:57,626 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2024-12-13 05:25:57,626 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2024-12-13 05:25:57,626 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2024-12-13 05:25:57,626 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2024-12-13 05:25:57,626 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2024-12-13 05:25:57,626 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2024-12-13 05:25:57,626 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token providers loaded successfully
+2024-12-13 05:25:57,626 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+2024-12-13 05:25:57,627 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+2024-12-13 05:25:57,627 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+2024-12-13 05:25:57,627 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2024-12-13 05:25:57,628 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2024-12-13 05:25:57,628 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2024-12-13 05:25:57,628 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2024-12-13 05:25:57,628 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2024-12-13 05:25:57,628 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2024-12-13 05:25:57,628 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2024-12-13 05:25:57,628 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2024-12-13 05:25:57,628 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+2024-12-13 05:25:57,628 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Checking provider and receiver instances consistency
+2024-12-13 05:25:57,628 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Provider and receiver instances are consistent
+2024-12-13 05:25:57,628 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Obtaining delegation tokens
+2024-12-13 05:25:57,631 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation tokens obtained successfully
+2024-12-13 05:25:57,631 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+2024-12-13 05:25:57,643 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Created BLOB server storage directory /var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/jm_145b2cb1d2dfd3e301c6541aed1cf633/blobStorage
+2024-12-13 05:25:57,645 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Started BLOB server at 127.0.0.1:51120 - max concurrent requests: 50 - max backlog: 1000
+2024-12-13 05:25:57,654 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+2024-12-13 05:25:57,656 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start actor system, external address localhost:0, bind address localhost:0.
+2024-12-13 05:25:57,666 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2024-12-13 05:25:57,669 INFO  org.apache.pekko.remote.RemoteActorRefProvider               [] - Pekko Cluster not in use - enabling unsafe features anyway because `pekko.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2024-12-13 05:25:57,669 INFO  org.apache.pekko.remote.Remoting                             [] - Starting remoting
+2024-12-13 05:25:57,674 INFO  org.apache.pekko.remote.Remoting                             [] - Remoting started; listening on addresses :[pekko.tcp://flink-metrics@localhost:51121]
+2024-12-13 05:25:57,678 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko.tcp://flink-metrics@localhost:51121
+2024-12-13 05:25:57,685 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at pekko://flink-metrics/user/rpc/MetricQueryService .
+2024-12-13 05:25:57,697 INFO  org.apache.flink.runtime.dispatcher.FileExecutionGraphInfoStore [] - Initializing FileExecutionGraphInfoStore: Storage directory /var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/executionGraphStore-7d5dab67-7a39-48b7-bf3a-a42e9ccf41f0, expiration time 3600000, maximum cache size 52428800 bytes.
+2024-12-13 05:25:57,734 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Upload directory /var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/flink-web-43ad7de0-a63d-4794-a908-f2f6f7473c0f/flink-web-upload does not exist. 
+2024-12-13 05:25:57,734 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Created directory /var/folders/mg/2n4rj8zs0k52wxkjbjkt_vqr0000gq/T/flink-web-43ad7de0-a63d-4794-a908-f2f6f7473c0f/flink-web-upload for file uploads.
+2024-12-13 05:25:57,736 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Starting rest endpoint.
+2024-12-13 05:25:57,883 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component log file: /Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/log/flink-vaibhavmishra-standalonesession-0-IM-BAN-LAP-0525.local.log
+2024-12-13 05:25:57,883 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component stdout file: /Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/log/flink-vaibhavmishra-standalonesession-0-IM-BAN-LAP-0525.local.out
+2024-12-13 05:25:57,945 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Rest endpoint listening at 127.0.0.1:8081
+2024-12-13 05:25:57,946 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - http://127.0.0.1:8081 was granted leadership with leaderSessionID=00000000-0000-0000-0000-000000000000
+2024-12-13 05:25:57,947 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Web frontend listening at http://127.0.0.1:8081.
+2024-12-13 05:25:57,956 INFO  org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherRunner [] - DefaultDispatcherRunner was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new DispatcherLeaderProcess.
+2024-12-13 05:25:57,958 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Start SessionDispatcherLeaderProcess.
+2024-12-13 05:25:57,959 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Starting resource manager service.
+2024-12-13 05:25:57,959 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Resource manager service is granted leadership with session id 00000000-0000-0000-0000-000000000000.
+2024-12-13 05:25:57,960 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Recover all persisted job graphs that are not finished, yet.
+2024-12-13 05:25:57,960 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Successfully recovered 0 persisted job graphs.
+2024-12-13 05:25:57,969 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at pekko://flink/user/rpc/dispatcher_0 .
+2024-12-13 05:25:57,972 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at pekko://flink/user/rpc/resourcemanager_1 .
+2024-12-13 05:25:57,979 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Starting the resource manager.
+2024-12-13 05:25:57,985 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Starting the slot manager.
+2024-12-13 05:25:57,985 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Starting tokens update task
+2024-12-13 05:25:57,985 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+2024-12-13 05:25:57,985 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Tokens update task not started because either no tokens obtained or none of the tokens specified its renewal date
+2024-12-13 05:25:58,790 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering TaskManager with ResourceID localhost:51123-5e1d16 (pekko.tcp://flink@localhost:51123/user/rpc/taskmanager_0) at ResourceManager
+2024-12-13 05:25:58,802 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Registering task executor localhost:51123-5e1d16 under d0dc178e1555a91bc3eb3d6781f0b5d3 at the slot manager.
+2024-12-13 05:37:39,515 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received JobGraph submission 'insert-into_default_catalog.default_database.orders_shipments_es' (07a359e2127ab4414043fa919e0b565a).
+2024-12-13 05:37:39,517 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'insert-into_default_catalog.default_database.orders_shipments_es' (07a359e2127ab4414043fa919e0b565a).
+2024-12-13 05:37:39,526 INFO  org.apache.flink.runtime.jobmaster.JobMasterServiceLeadershipRunner [] - JobMasterServiceLeadershipRunner for job 07a359e2127ab4414043fa919e0b565a was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new JobMasterServiceProcess.
+2024-12-13 05:37:39,532 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at pekko://flink/user/rpc/jobmanager_2 .
+2024-12-13 05:37:39,537 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'insert-into_default_catalog.default_database.orders_shipments_es' (07a359e2127ab4414043fa919e0b565a).
+2024-12-13 05:37:39,549 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy NoRestartBackoffTimeStrategy for insert-into_default_catalog.default_database.orders_shipments_es (07a359e2127ab4414043fa919e0b565a).
+2024-12-13 05:37:39,564 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph 34fe6aed1e246995e1f642298454344f for job 07a359e2127ab4414043fa919e0b565a.
+2024-12-13 05:37:39,572 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job insert-into_default_catalog.default_database.orders_shipments_es (07a359e2127ab4414043fa919e0b565a).
+2024-12-13 05:37:39,573 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 0 ms.
+2024-12-13 05:37:39,584 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+2024-12-13 05:37:39,587 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@34dc4e75
+2024-12-13 05:37:39,588 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-12-13 05:37:39,588 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'jobmanager'
+2024-12-13 05:37:39,602 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2024-12-13 05:37:39,606 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@2ee0d976 for insert-into_default_catalog.default_database.orders_shipments_es (07a359e2127ab4414043fa919e0b565a).
+2024-12-13 05:37:39,610 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'insert-into_default_catalog.default_database.orders_shipments_es' (07a359e2127ab4414043fa919e0b565a) under job master id 00000000000000000000000000000000.
+2024-12-13 05:37:39,611 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2024-12-13 05:37:39,611 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job insert-into_default_catalog.default_database.orders_shipments_es (07a359e2127ab4414043fa919e0b565a) switched from state CREATED to RUNNING.
+2024-12-13 05:37:39,613 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[1] (1/1) (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CREATED to SCHEDULED.
+2024-12-13 05:37:39,613 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[3] (1/1) (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) switched from CREATED to SCHEDULED.
+2024-12-13 05:37:39,613 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1) (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from CREATED to SCHEDULED.
+2024-12-13 05:37:39,613 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1) (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from CREATED to SCHEDULED.
+2024-12-13 05:37:39,619 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager pekko.tcp://flink@localhost:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+2024-12-13 05:37:39,621 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2024-12-13 05:37:39,623 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@pekko.tcp://flink@localhost:6123/user/rpc/jobmanager_2 for job 07a359e2127ab4414043fa919e0b565a.
+2024-12-13 05:37:39,627 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@pekko.tcp://flink@localhost:6123/user/rpc/jobmanager_2 for job 07a359e2127ab4414043fa919e0b565a.
+2024-12-13 05:37:39,627 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+2024-12-13 05:37:39,628 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Received resource requirements from job 07a359e2127ab4414043fa919e0b565a: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2024-12-13 05:37:39,692 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Matching resource requirements against available resources.
+Missing resources:
+	 Job 07a359e2127ab4414043fa919e0b565a
+		ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}
+Current resources:
+	TaskManager localhost:51123-5e1d16
+		Available: ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}
+		Total:     ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}
+2024-12-13 05:37:39,695 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DefaultSlotStatusSyncer [] - Starting allocation of slot 5ee20ecd83c29c497e2781f35e15fc7c from localhost:51123-5e1d16 for job 07a359e2127ab4414043fa919e0b565a with resource profile ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}.
+2024-12-13 05:37:39,747 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[1] (1/1) (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from SCHEDULED to DEPLOYING.
+2024-12-13 05:37:39,749 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: orders[1] (1/1) (attempt #0) with attempt id 34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0 and vertex id bc764cd8ddf7a0cff126f51c16239658_0 to localhost:51123-5e1d16 @ localhost (dataPort=51125) with allocation id 5ee20ecd83c29c497e2781f35e15fc7c
+2024-12-13 05:37:39,750 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[3] (1/1) (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) switched from SCHEDULED to DEPLOYING.
+2024-12-13 05:37:39,750 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: shipments[3] (1/1) (attempt #0) with attempt id 34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0 and vertex id feca28aff5a3958840bee985ee7de4d3_0 to localhost:51123-5e1d16 @ localhost (dataPort=51125) with allocation id 5ee20ecd83c29c497e2781f35e15fc7c
+2024-12-13 05:37:39,751 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1) (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from SCHEDULED to DEPLOYING.
+2024-12-13 05:37:39,751 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1) (attempt #0) with attempt id 34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0 and vertex id 4bf7c1955ffe56e2106d666433eaf137_0 to localhost:51123-5e1d16 @ localhost (dataPort=51125) with allocation id 5ee20ecd83c29c497e2781f35e15fc7c
+2024-12-13 05:37:39,754 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1) (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from SCHEDULED to DEPLOYING.
+2024-12-13 05:37:39,754 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1) (attempt #0) with attempt id 34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0 and vertex id c2cd52d0ed10bbeee8315f931b0d8f43_0 to localhost:51123-5e1d16 @ localhost (dataPort=51125) with allocation id 5ee20ecd83c29c497e2781f35e15fc7c
+2024-12-13 05:37:39,918 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1) (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:37:39,922 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1) (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:37:39,923 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[3] (1/1) (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:37:39,923 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[1] (1/1) (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:37:40,076 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[3] (1/1) (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:37:40,076 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[1] (1/1) (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:37:40,082 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1) (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:37:40,772 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1) (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:37:48,209 ERROR org.apache.flink.runtime.rest.handler.legacy.files.StaticFileServerHandler [] - Caught exception
+java.net.SocketException: Connection reset
+	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493) ~[?:?]
+	at org.apache.flink.shaded.netty4.io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[flink-dist-1.18.0.jar:1.18.0]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2024-12-13 05:37:48,209 ERROR org.apache.flink.runtime.rest.handler.legacy.files.StaticFileServerHandler [] - Caught exception
+java.net.SocketException: Connection reset
+	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493) ~[?:?]
+	at org.apache.flink.shaded.netty4.io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.shaded.netty4.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[flink-dist-1.18.0.jar:1.18.0]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2024-12-13 05:41:34,821 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - SinkMaterializer[7] -> Sink: orders_shipments_es[7] (1/1) (34fe6aed1e246995e1f642298454344f_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from RUNNING to FAILED on localhost:51123-5e1d16 @ localhost (dataPort=51125).
+java.lang.RuntimeException: An error occurred in ElasticsearchSink.
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkErrorAndRethrow(ElasticsearchSinkBase.java:415) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkAsyncErrorsAndRequests(ElasticsearchSinkBase.java:420) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.invoke(ElasticsearchSinkBase.java:317) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.table.runtime.operators.sink.SinkOperator.processElement(SinkOperator.java:65) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.pushToOperator(CopyingChainingOutput.java:75) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:50) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:29) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.api.operators.TimestampedCollector.collect(TimestampedCollector.java:51) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.addRow(SinkUpsertMaterializer.java:170) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.processElement(SinkUpsertMaterializer.java:147) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.RecordProcessorUtils.lambda$getRecordProcessor$0(RecordProcessorUtils.java:60) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.OneInputStreamTask$StreamTaskNetworkOutput.emitRecord(OneInputStreamTask.java:237) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.processElement(AbstractStreamTaskNetworkInput.java:146) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.emitNext(AbstractStreamTaskNetworkInput.java:110) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.StreamOneInputProcessor.processInput(StreamOneInputProcessor.java:65) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.processInput(StreamTask.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.mailbox.MailboxProcessor.runMailboxLoop(MailboxProcessor.java:231) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.runMailboxLoop(StreamTask.java:858) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:807) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:953) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:932) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:746) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+Caused by: java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	... 1 more
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	... 1 more
+2024-12-13 05:41:34,845 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job insert-into_default_catalog.default_database.orders_shipments_es (07a359e2127ab4414043fa919e0b565a) switched from state RUNNING to FAILING.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:176) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:107) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:285) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:276) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:269) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:764) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:741) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:83) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:488) ~[flink-dist-1.18.0.jar:1.18.0]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:309) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:307) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:222) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.FencedPekkoRpcActor.handleRpcMessage(FencedPekkoRpcActor.java:85) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:168) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:253) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1458) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2034) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:189) [?:?]
+Caused by: java.lang.RuntimeException: An error occurred in ElasticsearchSink.
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkErrorAndRethrow(ElasticsearchSinkBase.java:415) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkAsyncErrorsAndRequests(ElasticsearchSinkBase.java:420) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.invoke(ElasticsearchSinkBase.java:317) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.table.runtime.operators.sink.SinkOperator.processElement(SinkOperator.java:65) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.pushToOperator(CopyingChainingOutput.java:75) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:50) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:29) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.api.operators.TimestampedCollector.collect(TimestampedCollector.java:51) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.addRow(SinkUpsertMaterializer.java:170) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.processElement(SinkUpsertMaterializer.java:147) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.RecordProcessorUtils.lambda$getRecordProcessor$0(RecordProcessorUtils.java:60) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.OneInputStreamTask$StreamTaskNetworkOutput.emitRecord(OneInputStreamTask.java:237) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.processElement(AbstractStreamTaskNetworkInput.java:146) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.emitNext(AbstractStreamTaskNetworkInput.java:110) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.StreamOneInputProcessor.processInput(StreamOneInputProcessor.java:65) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.processInput(StreamTask.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.mailbox.MailboxProcessor.runMailboxLoop(MailboxProcessor.java:231) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.runMailboxLoop(StreamTask.java:858) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:807) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:953) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:932) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:746) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+Caused by: java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+2024-12-13 05:41:34,847 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[1] (1/1) (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:41:34,848 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[3] (1/1) (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:41:34,848 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1) (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:41:34,854 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[5] -> Calc[6] -> ConstraintEnforcer[7] (1/1) (34fe6aed1e246995e1f642298454344f_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:41:35,742 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[1] (1/1) (34fe6aed1e246995e1f642298454344f_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:41:35,757 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[3] (1/1) (34fe6aed1e246995e1f642298454344f_feca28aff5a3958840bee985ee7de4d3_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:41:35,763 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Clearing resource requirements of job 07a359e2127ab4414043fa919e0b565a
+2024-12-13 05:41:35,762 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job insert-into_default_catalog.default_database.orders_shipments_es (07a359e2127ab4414043fa919e0b565a) switched from state FAILING to FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:176) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:107) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:285) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:276) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:269) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:764) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:741) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:83) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:488) ~[flink-dist-1.18.0.jar:1.18.0]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:309) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:307) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:222) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.FencedPekkoRpcActor.handleRpcMessage(FencedPekkoRpcActor.java:85) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:168) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:253) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1458) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2034) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:189) [?:?]
+Caused by: java.lang.RuntimeException: An error occurred in ElasticsearchSink.
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkErrorAndRethrow(ElasticsearchSinkBase.java:415) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkAsyncErrorsAndRequests(ElasticsearchSinkBase.java:420) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.invoke(ElasticsearchSinkBase.java:317) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.table.runtime.operators.sink.SinkOperator.processElement(SinkOperator.java:65) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.pushToOperator(CopyingChainingOutput.java:75) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:50) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:29) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.api.operators.TimestampedCollector.collect(TimestampedCollector.java:51) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.addRow(SinkUpsertMaterializer.java:170) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.processElement(SinkUpsertMaterializer.java:147) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.RecordProcessorUtils.lambda$getRecordProcessor$0(RecordProcessorUtils.java:60) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.OneInputStreamTask$StreamTaskNetworkOutput.emitRecord(OneInputStreamTask.java:237) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.processElement(AbstractStreamTaskNetworkInput.java:146) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.emitNext(AbstractStreamTaskNetworkInput.java:110) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.StreamOneInputProcessor.processInput(StreamOneInputProcessor.java:65) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.processInput(StreamTask.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.mailbox.MailboxProcessor.runMailboxLoop(MailboxProcessor.java:231) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.runMailboxLoop(StreamTask.java:858) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:807) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:953) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:932) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:746) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+Caused by: java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+2024-12-13 05:41:35,764 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Stopping checkpoint coordinator for job 07a359e2127ab4414043fa919e0b565a.
+2024-12-13 05:41:35,783 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job 07a359e2127ab4414043fa919e0b565a reached terminal state FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:176)
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:107)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:285)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:276)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:269)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:764)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:741)
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:83)
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:488)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:309)
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:307)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:222)
+	at org.apache.flink.runtime.rpc.pekko.FencedPekkoRpcActor.handleRpcMessage(FencedPekkoRpcActor.java:85)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:168)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:253)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1458)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2034)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:189)
+Caused by: java.lang.RuntimeException: An error occurred in ElasticsearchSink.
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkErrorAndRethrow(ElasticsearchSinkBase.java:415)
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkAsyncErrorsAndRequests(ElasticsearchSinkBase.java:420)
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.invoke(ElasticsearchSinkBase.java:317)
+	at org.apache.flink.table.runtime.operators.sink.SinkOperator.processElement(SinkOperator.java:65)
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.pushToOperator(CopyingChainingOutput.java:75)
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:50)
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:29)
+	at org.apache.flink.streaming.api.operators.TimestampedCollector.collect(TimestampedCollector.java:51)
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.addRow(SinkUpsertMaterializer.java:170)
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.processElement(SinkUpsertMaterializer.java:147)
+	at org.apache.flink.streaming.runtime.io.RecordProcessorUtils.lambda$getRecordProcessor$0(RecordProcessorUtils.java:60)
+	at org.apache.flink.streaming.runtime.tasks.OneInputStreamTask$StreamTaskNetworkOutput.emitRecord(OneInputStreamTask.java:237)
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.processElement(AbstractStreamTaskNetworkInput.java:146)
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.emitNext(AbstractStreamTaskNetworkInput.java:110)
+	at org.apache.flink.streaming.runtime.io.StreamOneInputProcessor.processInput(StreamOneInputProcessor.java:65)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.processInput(StreamTask.java:562)
+	at org.apache.flink.streaming.runtime.tasks.mailbox.MailboxProcessor.runMailboxLoop(MailboxProcessor.java:231)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.runMailboxLoop(StreamTask.java:858)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:807)
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:953)
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:932)
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:746)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	... 1 more
+Caused by: java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:220)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781)
+	... 18 more
+2024-12-13 05:41:35,801 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job 07a359e2127ab4414043fa919e0b565a has been registered for cleanup in the JobResultStore after reaching a terminal state.
+2024-12-13 05:41:35,804 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Stopping the JobMaster for job 'insert-into_default_catalog.default_database.orders_shipments_es' (07a359e2127ab4414043fa919e0b565a).
+2024-12-13 05:41:35,806 INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore [] - Shutting down
+2024-12-13 05:41:35,806 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Disconnect TaskExecutor localhost:51123-5e1d16 because: Stopping JobMaster for job 'insert-into_default_catalog.default_database.orders_shipments_es' (07a359e2127ab4414043fa919e0b565a).
+2024-12-13 05:41:35,807 INFO  org.apache.flink.runtime.jobmaster.slotpool.DefaultDeclarativeSlotPool [] - Releasing slot [5ee20ecd83c29c497e2781f35e15fc7c].
+2024-12-13 05:41:35,807 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Close ResourceManager connection 145b2cb1d2dfd3e301c6541aed1cf633: Stopping JobMaster for job 'insert-into_default_catalog.default_database.orders_shipments_es' (07a359e2127ab4414043fa919e0b565a).
+2024-12-13 05:41:35,809 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Disconnect job manager 00000000000000000000000000000000@pekko.tcp://flink@localhost:6123/user/rpc/jobmanager_2 for job 07a359e2127ab4414043fa919e0b565a from the resource manager.
+2024-12-13 05:41:35,813 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DefaultSlotStatusSyncer [] - Freeing slot 5ee20ecd83c29c497e2781f35e15fc7c.
+2024-12-13 05:50:55,482 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received JobGraph submission 'insert-into_default_catalog.default_database.orders_shipments_es' (5b31fb47dabd13feef3d40965777fa29).
+2024-12-13 05:50:55,483 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'insert-into_default_catalog.default_database.orders_shipments_es' (5b31fb47dabd13feef3d40965777fa29).
+2024-12-13 05:50:55,484 INFO  org.apache.flink.runtime.jobmaster.JobMasterServiceLeadershipRunner [] - JobMasterServiceLeadershipRunner for job 5b31fb47dabd13feef3d40965777fa29 was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new JobMasterServiceProcess.
+2024-12-13 05:50:55,488 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at pekko://flink/user/rpc/jobmanager_3 .
+2024-12-13 05:50:55,488 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'insert-into_default_catalog.default_database.orders_shipments_es' (5b31fb47dabd13feef3d40965777fa29).
+2024-12-13 05:50:55,490 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy NoRestartBackoffTimeStrategy for insert-into_default_catalog.default_database.orders_shipments_es (5b31fb47dabd13feef3d40965777fa29).
+2024-12-13 05:50:55,490 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph 88befeddb762e3e906e86ee1949f22b4 for job 5b31fb47dabd13feef3d40965777fa29.
+2024-12-13 05:50:55,490 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job insert-into_default_catalog.default_database.orders_shipments_es (5b31fb47dabd13feef3d40965777fa29).
+2024-12-13 05:50:55,490 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 0 ms.
+2024-12-13 05:50:55,491 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+2024-12-13 05:50:55,491 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@3a991dc5
+2024-12-13 05:50:55,491 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-12-13 05:50:55,491 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'jobmanager'
+2024-12-13 05:50:55,491 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2024-12-13 05:50:55,492 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@5d43f51a for insert-into_default_catalog.default_database.orders_shipments_es (5b31fb47dabd13feef3d40965777fa29).
+2024-12-13 05:50:55,492 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'insert-into_default_catalog.default_database.orders_shipments_es' (5b31fb47dabd13feef3d40965777fa29) under job master id 00000000000000000000000000000000.
+2024-12-13 05:50:55,492 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2024-12-13 05:50:55,492 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job insert-into_default_catalog.default_database.orders_shipments_es (5b31fb47dabd13feef3d40965777fa29) switched from state CREATED to RUNNING.
+2024-12-13 05:50:55,492 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[8] (1/1) (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CREATED to SCHEDULED.
+2024-12-13 05:50:55,492 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[10] (1/1) (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) switched from CREATED to SCHEDULED.
+2024-12-13 05:50:55,492 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1) (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from CREATED to SCHEDULED.
+2024-12-13 05:50:55,493 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1) (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from CREATED to SCHEDULED.
+2024-12-13 05:50:55,493 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager pekko.tcp://flink@localhost:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+2024-12-13 05:50:55,494 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2024-12-13 05:50:55,494 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@pekko.tcp://flink@localhost:6123/user/rpc/jobmanager_3 for job 5b31fb47dabd13feef3d40965777fa29.
+2024-12-13 05:50:55,494 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@pekko.tcp://flink@localhost:6123/user/rpc/jobmanager_3 for job 5b31fb47dabd13feef3d40965777fa29.
+2024-12-13 05:50:55,495 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+2024-12-13 05:50:55,495 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Received resource requirements from job 5b31fb47dabd13feef3d40965777fa29: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2024-12-13 05:50:55,555 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Matching resource requirements against available resources.
+Missing resources:
+	 Job 5b31fb47dabd13feef3d40965777fa29
+		ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}
+Current resources:
+	TaskManager localhost:51123-5e1d16
+		Available: ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}
+		Total:     ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}
+2024-12-13 05:50:55,556 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DefaultSlotStatusSyncer [] - Starting allocation of slot e6554f1ee10f8230583b422b2da56b0f from localhost:51123-5e1d16 for job 5b31fb47dabd13feef3d40965777fa29 with resource profile ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}.
+2024-12-13 05:50:55,570 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[8] (1/1) (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from SCHEDULED to DEPLOYING.
+2024-12-13 05:50:55,572 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: orders[8] (1/1) (attempt #0) with attempt id 88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0 and vertex id bc764cd8ddf7a0cff126f51c16239658_0 to localhost:51123-5e1d16 @ localhost (dataPort=51125) with allocation id e6554f1ee10f8230583b422b2da56b0f
+2024-12-13 05:50:55,573 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[10] (1/1) (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) switched from SCHEDULED to DEPLOYING.
+2024-12-13 05:50:55,573 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: shipments[10] (1/1) (attempt #0) with attempt id 88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0 and vertex id feca28aff5a3958840bee985ee7de4d3_0 to localhost:51123-5e1d16 @ localhost (dataPort=51125) with allocation id e6554f1ee10f8230583b422b2da56b0f
+2024-12-13 05:50:55,573 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1) (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from SCHEDULED to DEPLOYING.
+2024-12-13 05:50:55,573 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1) (attempt #0) with attempt id 88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0 and vertex id 4bf7c1955ffe56e2106d666433eaf137_0 to localhost:51123-5e1d16 @ localhost (dataPort=51125) with allocation id e6554f1ee10f8230583b422b2da56b0f
+2024-12-13 05:50:55,574 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1) (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from SCHEDULED to DEPLOYING.
+2024-12-13 05:50:55,574 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1) (attempt #0) with attempt id 88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0 and vertex id c2cd52d0ed10bbeee8315f931b0d8f43_0 to localhost:51123-5e1d16 @ localhost (dataPort=51125) with allocation id e6554f1ee10f8230583b422b2da56b0f
+2024-12-13 05:50:55,633 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1) (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:50:55,636 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1) (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:50:55,636 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[10] (1/1) (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:50:55,637 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[8] (1/1) (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from DEPLOYING to INITIALIZING.
+2024-12-13 05:50:55,649 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[10] (1/1) (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:50:55,649 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[8] (1/1) (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:50:55,671 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1) (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:50:55,902 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1) (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from INITIALIZING to RUNNING.
+2024-12-13 05:52:05,531 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - SinkMaterializer[14] -> Sink: orders_shipments_es[14] (1/1) (88befeddb762e3e906e86ee1949f22b4_c2cd52d0ed10bbeee8315f931b0d8f43_0_0) switched from RUNNING to FAILED on localhost:51123-5e1d16 @ localhost (dataPort=51125).
+java.lang.RuntimeException: An error occurred in ElasticsearchSink.
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkErrorAndRethrow(ElasticsearchSinkBase.java:415) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkAsyncErrorsAndRequests(ElasticsearchSinkBase.java:420) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.invoke(ElasticsearchSinkBase.java:317) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.table.runtime.operators.sink.SinkOperator.processElement(SinkOperator.java:65) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.pushToOperator(CopyingChainingOutput.java:75) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:50) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:29) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.api.operators.TimestampedCollector.collect(TimestampedCollector.java:51) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.retractRow(SinkUpsertMaterializer.java:189) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.processElement(SinkUpsertMaterializer.java:152) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.RecordProcessorUtils.lambda$getRecordProcessor$0(RecordProcessorUtils.java:60) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.OneInputStreamTask$StreamTaskNetworkOutput.emitRecord(OneInputStreamTask.java:237) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.processElement(AbstractStreamTaskNetworkInput.java:146) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.emitNext(AbstractStreamTaskNetworkInput.java:110) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.StreamOneInputProcessor.processInput(StreamOneInputProcessor.java:65) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.processInput(StreamTask.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.mailbox.MailboxProcessor.runMailboxLoop(MailboxProcessor.java:231) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.runMailboxLoop(StreamTask.java:858) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:807) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:953) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:932) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:746) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+Caused by: java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	... 1 more
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	... 1 more
+2024-12-13 05:52:05,535 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job insert-into_default_catalog.default_database.orders_shipments_es (5b31fb47dabd13feef3d40965777fa29) switched from state RUNNING to FAILING.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:176) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:107) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:285) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:276) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:269) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:764) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:741) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:83) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:488) ~[flink-dist-1.18.0.jar:1.18.0]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:309) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:307) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:222) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.FencedPekkoRpcActor.handleRpcMessage(FencedPekkoRpcActor.java:85) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:168) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:253) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1458) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2034) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:189) [?:?]
+Caused by: java.lang.RuntimeException: An error occurred in ElasticsearchSink.
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkErrorAndRethrow(ElasticsearchSinkBase.java:415) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkAsyncErrorsAndRequests(ElasticsearchSinkBase.java:420) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.invoke(ElasticsearchSinkBase.java:317) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.table.runtime.operators.sink.SinkOperator.processElement(SinkOperator.java:65) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.pushToOperator(CopyingChainingOutput.java:75) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:50) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:29) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.api.operators.TimestampedCollector.collect(TimestampedCollector.java:51) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.retractRow(SinkUpsertMaterializer.java:189) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.processElement(SinkUpsertMaterializer.java:152) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.RecordProcessorUtils.lambda$getRecordProcessor$0(RecordProcessorUtils.java:60) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.OneInputStreamTask$StreamTaskNetworkOutput.emitRecord(OneInputStreamTask.java:237) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.processElement(AbstractStreamTaskNetworkInput.java:146) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.emitNext(AbstractStreamTaskNetworkInput.java:110) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.StreamOneInputProcessor.processInput(StreamOneInputProcessor.java:65) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.processInput(StreamTask.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.mailbox.MailboxProcessor.runMailboxLoop(MailboxProcessor.java:231) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.runMailboxLoop(StreamTask.java:858) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:807) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:953) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:932) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:746) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+Caused by: java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+2024-12-13 05:52:05,537 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[8] (1/1) (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:52:05,537 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[10] (1/1) (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:52:05,537 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1) (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from RUNNING to CANCELING.
+2024-12-13 05:52:05,542 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Join[12] -> Calc[13] -> ConstraintEnforcer[14] (1/1) (88befeddb762e3e906e86ee1949f22b4_4bf7c1955ffe56e2106d666433eaf137_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:52:06,380 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: orders[8] (1/1) (88befeddb762e3e906e86ee1949f22b4_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:52:11,242 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: shipments[10] (1/1) (88befeddb762e3e906e86ee1949f22b4_feca28aff5a3958840bee985ee7de4d3_0_0) switched from CANCELING to CANCELED.
+2024-12-13 05:52:11,243 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Clearing resource requirements of job 5b31fb47dabd13feef3d40965777fa29
+2024-12-13 05:52:11,243 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job insert-into_default_catalog.default_database.orders_shipments_es (5b31fb47dabd13feef3d40965777fa29) switched from state FAILING to FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:176) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:107) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:285) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:276) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:269) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:764) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:741) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:83) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:488) ~[flink-dist-1.18.0.jar:1.18.0]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:309) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:307) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:222) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.FencedPekkoRpcActor.handleRpcMessage(FencedPekkoRpcActor.java:85) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:168) ~[flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:253) [flink-rpc-akka295d2175-3760-4f09-8315-d51c783208f3.jar:1.18.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1458) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2034) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:189) [?:?]
+Caused by: java.lang.RuntimeException: An error occurred in ElasticsearchSink.
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkErrorAndRethrow(ElasticsearchSinkBase.java:415) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkAsyncErrorsAndRequests(ElasticsearchSinkBase.java:420) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.invoke(ElasticsearchSinkBase.java:317) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.table.runtime.operators.sink.SinkOperator.processElement(SinkOperator.java:65) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.pushToOperator(CopyingChainingOutput.java:75) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:50) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:29) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.api.operators.TimestampedCollector.collect(TimestampedCollector.java:51) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.retractRow(SinkUpsertMaterializer.java:189) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.processElement(SinkUpsertMaterializer.java:152) ~[flink-table-runtime-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.RecordProcessorUtils.lambda$getRecordProcessor$0(RecordProcessorUtils.java:60) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.OneInputStreamTask$StreamTaskNetworkOutput.emitRecord(OneInputStreamTask.java:237) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.processElement(AbstractStreamTaskNetworkInput.java:146) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.emitNext(AbstractStreamTaskNetworkInput.java:110) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.io.StreamOneInputProcessor.processInput(StreamOneInputProcessor.java:65) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.processInput(StreamTask.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.mailbox.MailboxProcessor.runMailboxLoop(MailboxProcessor.java:231) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.runMailboxLoop(StreamTask.java:858) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:807) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:953) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:932) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:746) ~[flink-dist-1.18.0.jar:1.18.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.18.0.jar:1.18.0]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+Caused by: java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:220) ~[?:?]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591) ~[flink-sql-connector-elasticsearch7-3.0.1-1.17.jar:3.0.1-1.17]
+	at java.lang.Thread.run(Thread.java:1575) ~[?:?]
+2024-12-13 05:52:11,244 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Stopping checkpoint coordinator for job 5b31fb47dabd13feef3d40965777fa29.
+2024-12-13 05:52:11,245 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job 5b31fb47dabd13feef3d40965777fa29 reached terminal state FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:176)
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:107)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:285)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:276)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:269)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:764)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:741)
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:83)
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:488)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.lambda$handleRpcInvocation$1(PekkoRpcActor.java:309)
+	at org.apache.flink.runtime.concurrent.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcInvocation(PekkoRpcActor.java:307)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleRpcMessage(PekkoRpcActor.java:222)
+	at org.apache.flink.runtime.rpc.pekko.FencedPekkoRpcActor.handleRpcMessage(FencedPekkoRpcActor.java:85)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleMessage(PekkoRpcActor.java:168)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:253)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1458)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2034)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:189)
+Caused by: java.lang.RuntimeException: An error occurred in ElasticsearchSink.
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkErrorAndRethrow(ElasticsearchSinkBase.java:415)
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.checkAsyncErrorsAndRequests(ElasticsearchSinkBase.java:420)
+	at org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase.invoke(ElasticsearchSinkBase.java:317)
+	at org.apache.flink.table.runtime.operators.sink.SinkOperator.processElement(SinkOperator.java:65)
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.pushToOperator(CopyingChainingOutput.java:75)
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:50)
+	at org.apache.flink.streaming.runtime.tasks.CopyingChainingOutput.collect(CopyingChainingOutput.java:29)
+	at org.apache.flink.streaming.api.operators.TimestampedCollector.collect(TimestampedCollector.java:51)
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.retractRow(SinkUpsertMaterializer.java:189)
+	at org.apache.flink.table.runtime.operators.sink.SinkUpsertMaterializer.processElement(SinkUpsertMaterializer.java:152)
+	at org.apache.flink.streaming.runtime.io.RecordProcessorUtils.lambda$getRecordProcessor$0(RecordProcessorUtils.java:60)
+	at org.apache.flink.streaming.runtime.tasks.OneInputStreamTask$StreamTaskNetworkOutput.emitRecord(OneInputStreamTask.java:237)
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.processElement(AbstractStreamTaskNetworkInput.java:146)
+	at org.apache.flink.streaming.runtime.io.AbstractStreamTaskNetworkInput.emitNext(AbstractStreamTaskNetworkInput.java:110)
+	at org.apache.flink.streaming.runtime.io.StreamOneInputProcessor.processInput(StreamOneInputProcessor.java:65)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.processInput(StreamTask.java:562)
+	at org.apache.flink.streaming.runtime.tasks.mailbox.MailboxProcessor.runMailboxLoop(MailboxProcessor.java:231)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.runMailboxLoop(StreamTask.java:858)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:807)
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:953)
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:932)
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:746)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.io.IOException: Unable to parse response body for Response{requestLine=POST /_bulk?timeout=1m HTTP/1.1, host=https://dev-bbe048.es.ap-south-1.aws.elastic-cloud.com:9243, response=HTTP/1.1 200 OK}
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1783)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:636)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:376)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestClient$1.completed(RestClient.java:370)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.flink.elasticsearch7.shaded.org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	... 1 more
+Caused by: java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:220)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.DocWriteResponse.<init>(DocWriteResponse.java:127)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse.<init>(UpdateResponse.java:65)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:172)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.update.UpdateResponse$Builder.build(UpdateResponse.java:160)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkItemResponse.fromXContent(BulkItemResponse.java:159)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.action.bulk.BulkResponse.fromXContent(BulkResponse.java:188)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:1911)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient.lambda$performRequestAsyncAndParseEntity$10(RestHighLevelClient.java:1699)
+	at org.apache.flink.elasticsearch7.shaded.org.elasticsearch.client.RestHighLevelClient$1.onSuccess(RestHighLevelClient.java:1781)
+	... 18 more
+2024-12-13 05:52:11,248 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job 5b31fb47dabd13feef3d40965777fa29 has been registered for cleanup in the JobResultStore after reaching a terminal state.
+2024-12-13 05:52:11,248 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Stopping the JobMaster for job 'insert-into_default_catalog.default_database.orders_shipments_es' (5b31fb47dabd13feef3d40965777fa29).
+2024-12-13 05:52:11,249 INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore [] - Shutting down
+2024-12-13 05:52:11,249 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Disconnect TaskExecutor localhost:51123-5e1d16 because: Stopping JobMaster for job 'insert-into_default_catalog.default_database.orders_shipments_es' (5b31fb47dabd13feef3d40965777fa29).
+2024-12-13 05:52:11,249 INFO  org.apache.flink.runtime.jobmaster.slotpool.DefaultDeclarativeSlotPool [] - Releasing slot [e6554f1ee10f8230583b422b2da56b0f].
+2024-12-13 05:52:11,249 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Close ResourceManager connection 145b2cb1d2dfd3e301c6541aed1cf633: Stopping JobMaster for job 'insert-into_default_catalog.default_database.orders_shipments_es' (5b31fb47dabd13feef3d40965777fa29).
+2024-12-13 05:52:11,249 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Disconnect job manager 00000000000000000000000000000000@pekko.tcp://flink@localhost:6123/user/rpc/jobmanager_3 for job 5b31fb47dabd13feef3d40965777fa29 from the resource manager.
+2024-12-13 05:52:11,251 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DefaultSlotStatusSyncer [] - Freeing slot e6554f1ee10f8230583b422b2da56b0f.
+2024-12-13 05:58:11,783 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Closing TaskExecutor connection localhost:51123-5e1d16 because: The TaskExecutor is shutting down.
+2024-12-13 05:58:11,784 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Unregistering task executor d0dc178e1555a91bc3eb3d6781f0b5d3 from the slot manager.
+2024-12-13 05:58:12,086 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - RECEIVED SIGNAL 15: SIGTERM. Shutting down as requested.
+2024-12-13 05:58:12,088 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Shutting StandaloneSessionClusterEntrypoint down with application status UNKNOWN. Diagnostics Cluster entrypoint has been closed externally..
+2024-12-13 05:58:12,088 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Stopped BLOB server at 127.0.0.1:51120

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.14">
+<file name="/Users/vaibhavmishra/projects/self/flink-poc/flink-1.18.0/flink-connector-elasticsearch-3.0.1/flink-sql-connector-elasticsearch6/src/test/java/org/apache/flink/connectors/elasticsearch/PackagingITCase.java">
+</file>
+</checkstyle>
